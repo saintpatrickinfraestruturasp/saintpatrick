@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Saint Patrick Infraestrutura</title>
+    <meta name="description" content="Conheça a Saint Patrick Infraestrutura: nossa história, missão, valores e compromisso com a excelência em pavimentação asfáltica.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-brand-primary: #004d40;
+            --color-brand-secondary: #197855;
+            --color-robust: #343a40;
+            --color-text-header: #212529;
+            --color-text-body: #495057;
+            --color-bg-light: #f8f9fa;
+            --color-bg-white: #ffffff;
+            
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-weight-bold: 700;
+            --font-weight-extra-bold: 900;
+            
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 32px;
+            --space-lg: 64px;
+            --space-xl: 120px;
+            --border-radius: 12px;
+            --transition-speed: 0.4s;
+            --shadow-base: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-deep: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-secondary);
+            line-height: 1.6;
+            color: var(--color-text-body);
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%);
+            overflow-x: hidden;
+        }
+        .container { max-width: 1320px; margin: 0 auto; padding: 0 var(--space-md); }
+
+        h1, h2, h3 { font-family: var(--font-primary); color: var(--color-text-header); line-height: 1.2; }
+        .hero h1, .hero p, .hero a, .bg--primary h2, .bg--primary p, .bg--robust h2, .bg--robust p { color: var(--color-bg-white); }
+        .heading-display { font-size: 3.5rem; font-weight: var(--font-weight-extra-bold); }
+        .h2-inline-bold-white { color: white; font-weight: bold; display: inline; font-size: 1.8rem; }
+        .heading-secondary { font-size: 2.5rem; }
+        .text-lead { font-size: 1.15rem; font-weight: 300; line-height: 1.7; }
+
+        .bg--primary { 
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, #005f50 100%); 
+        }
+        .bg--robust { 
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%); 
+        }
+        .bg--light { 
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%); 
+        }
+        .bg--primary-gradient { 
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, #005f50 100%); 
+        }
+        .text--light { color: var(--color-bg-white); }
+        .text--secondary { color: var(--color-brand-secondary); }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 2rem; }
+
+        .grid { display: grid; }
+        .grid--2-cols-split { grid-template-columns: 1.3fr 1fr; }
+        .grid--3-cols { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid--4-cols { grid-template-columns: repeat(4, 1fr); }
+        .grid--5-cols { grid-template-columns: repeat(5, 1fr); }
+        .grid--gap-md { gap: var(--space-md); }
+        .grid--gap-lg { gap: var(--space-lg); }
+
+        /* BOTÕES COM GRADIENTES - TAMANHO REDUZIDO */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-speed) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-size: 0.8rem;
+        }
+        .button--cta {
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            color: var(--color-bg-white);
+            box-shadow: 0 5px 15px rgba(25, 120, 85, 0.3);
+        }
+        .button--cta:hover {
+            background: linear-gradient(135deg, #41b6a3 0%, var(--color-brand-secondary) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(25, 120, 85, 0.5);
+        }
+        .button--secondary { 
+            background: transparent; 
+            color: var(--color-bg-white); 
+            border-color: var(--color-bg-white);
+            border-width: 2px;
+        }
+        .button--secondary:hover { 
+            background: var(--color-bg-white); 
+            color: var(--color-brand-primary); 
+            border-color: var(--color-bg-white); 
+            transform: translateY(-3px); 
+        }
+        .button--large { 
+            padding: 10px 28px;
+            font-size: 0.85rem;
+        }
+        .button--link { 
+            background: none; 
+            border: none; 
+            font-weight: 500; 
+            opacity: 0.9; 
+            color: var(--color-bg-white); 
+            font-size: 0.8rem;
+        }
+        .button--link:hover { 
+            opacity: 1; 
+            color: var(--color-brand-secondary); 
+        }
+        .button--link i { 
+            margin-left: var(--space-xs); 
+            transition: transform 0.3s; 
+        }
+        .button--link:hover i { 
+            transform: translateX(4px); 
+        }
+        .button i { 
+            margin-left: var(--space-xs); 
+            font-size: 0.8rem;
+        }
+
+        /* HEADER COM GRADIENTE E MENU CENTRALIZADO */
+        .header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .header[data-scroll-state="scrolled"] {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+        }
+        .header__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            min-height: 80px;
+        }
+
+        .header__logo img {
+            transition: transform 0.3s ease;
+        }
+        .header__logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* NAVEGAÇÃO CENTRALIZADA COM BOTÃO À DIREITA */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+        }
+
+        .navigation__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            justify-content: center;
+        }
+        .navigation__item { 
+            position: relative; 
+        }
+
+        .navigation__link {
+            color: var(--color-text-header);
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            letter-spacing: -0.2px;
+        }
+
+        /* Removendo ícones do menu principal */
+        .navigation__link i.fa-fw {
+            display: none;
+        }
+
+        .navigation__link:hover,
+        .navigation__link--active {
+            color: var(--color-brand-primary);
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.05) 0%, rgba(25, 120, 85, 0.05) 100%);
+        }
+
+        /* LINHA ABAIXO DO MENU AO PASSAR O MOUSE */
+        .navigation__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navigation__link:hover::after,
+        .navigation__link--active::after {
+            width: 80%;
+        }
+
+        .navigation__icon {
+            font-size: 0.7rem;
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        .navigation__item--dropdown:hover .navigation__icon {
+            transform: rotate(180deg);
+        }
+
+        /* SUBMENU ELEGANTE - SEM ÍCONES */
+        .navigation__submenu {
+            position: absolute;
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            min-width: 280px;
+            padding: 12px;
+            border-radius: 12px;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-top: 3px solid var(--color-brand-secondary);
+            list-style: none;
+        }
+        .navigation__item--dropdown:hover .navigation__submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .navigation__submenu li {
+            margin: 0;
+        }
+        .navigation__submenu li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            color: var(--color-text-body);
+            transition: all 0.2s;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .navigation__submenu li a:hover {
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.08) 0%, rgba(25, 120, 85, 0.08) 100%);
+            color: var(--color-brand-primary);
+            transform: translateX(5px);
+        }
+        /* Removendo ícones do submenu */
+        .navigation__submenu li a i {
+            display: none;
+        }
+
+        /* BOTÃO CTA À DIREITA */
+        .navigation__cta {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .header__toggle { display: none; }
+
+        /* HERO SECTION DA EMPRESA */
+        .hero-empresa {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #004d40 0%, #197855 100%);
+        }
+        .hero-empresa__content {
+            z-index: 10;
+            color: var(--color-bg-white);
+            max-width: 900px;
+            padding-top: var(--space-lg);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+        .hero-empresa__content h1,
+        .hero-empresa__content p {
+            text-align: left;
+        }
+        .hero-empresa__actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            justify-content: flex-start;
+        }
+        .hero-empresa__image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+            z-index: 0;
+        }
+        .hero-empresa__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* SEÇÃO HISTÓRIA */
+        .section-historia {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-white);
+        }
+        .historia-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+        .historia-texto {
+            padding-right: var(--space-md);
+        }
+        .historia-imagem {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-deep);
+            height: 400px;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* SEÇÃO DIFERENCIAIS */
+        .section-diferenciais {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-light);
+        }
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .diferencial-card {
+            background: var(--color-bg-white);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-base);
+            text-align: center;
+            transition: all var(--transition-speed);
+            border-top: 4px solid transparent;
+        }
+        .diferencial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-deep);
+            border-top-color: var(--color-brand-secondary);
+        }
+        .diferencial-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            color: var(--color-brand-primary);
+        }
+        .diferencial-title {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-header);
+        }
+
+        /* SEÇÃO EQUIPE */
+        .section-equipe {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-white);
+        }
+        .equipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+        }
+        .membro-card {
+            background: var(--color-bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-base);
+            transition: all var(--transition-speed);
+        }
+        .membro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-deep);
+        }
+        .membro-imagem {
+            height: 250px;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .membro-info {
+            padding: var(--space-md);
+        }
+        .membro-nome {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--color-text-header);
+        }
+        .membro-cargo {
+            color: var(--color-brand-secondary);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        /* SEÇÃO CERTIFICAÇÕES */
+        .section-certificacoes {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-light);
+        }
+        .certificacoes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+        .certificacao-item {
+            background: var(--color-bg-white);
+            padding: var(--space-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-base);
+            text-align: center;
+            transition: all var(--transition-speed);
+        }
+        .certificacao-item:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-deep);
+        }
+        .certificacao-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-brand-primary);
+        }
+
+        /* SEÇÃO COMPROMISSO */
+        .section-compromisso {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, #005f50 100%);
+            color: var(--color-bg-white);
+        }
+        .compromisso-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* FOOTER COM GRADIENTE */
+        .footer {
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%);
+            color: var(--color-bg-white);
+            padding: var(--space-lg) 0 0;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: var(--color-bg-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover { color: var(--color-brand-secondary); }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            padding-bottom: var(--space-md);
+        }
+        .footer__col p { margin-bottom: 5px; font-size: 0.9rem; }
+        .footer__heading {
+            font-family: var(--font-primary);
+            color: var(--color-brand-secondary);
+            margin-bottom: var(--space-sm);
+            font-size: 1rem;
+            position: relative;
+            padding-left: var(--space-sm);
+        }
+        .footer__heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 80%;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+        .footer__list {
+            list-style: none;
+            padding: 0;
+        }
+        .footer__list li { margin-bottom: 8px; font-size: 0.9rem; }
+        .footer__social a {
+            margin-right: var(--space-sm);
+            transition: transform 0.3s;
+            color: var(--color-bg-white);
+        }
+        .footer__social a:hover {
+            transform: translateY(-3px);
+            color: var(--color-brand-secondary);
+        }
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) 0;
+            text-align: center;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* BOTÃO WHATSAPP FLUTUANTE COM GRADIENTE */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            animation: pulse-whats 2s infinite;
+        }
+        .whatsapp-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.3);
+            animation: ripple 1.5s infinite;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.7);
+        }
+        .whatsapp-button i {
+            color: white;
+            font-size: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            white-space: nowrap;
+            font-weight: 600;
+            color: var(--color-text-header);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+        }
+        .whatsapp-button:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 85px;
+        }
+
+        @keyframes pulse-whats {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* RESPONSIVIDADE MOBILE */
+        @media (max-width: 1024px) {
+            .heading-display { font-size: 2.2rem; }
+            .heading-secondary { font-size: 1.8rem; }
+            
+            .historia-content {
+                grid-template-columns: 1fr;
+            }
+            .historia-texto {
+                padding-right: 0;
+            }
+            
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header__toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 25px;
+                cursor: pointer;
+                z-index: 1010;
+                border: none;
+                background: transparent;
+                padding: 0;
+            }
+            .header__bar {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background: var(--color-text-header);
+                border-radius: 1.5px;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .header__toggle.is-active .header__bar:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            .header__toggle.is-active .header__bar:nth-child(1) {
+                transform: translateY(11px) rotate(45deg);
+            }
+            .header__toggle.is-active .header__bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+
+            .navigation {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                transition: max-height 0.4s ease-in-out;
+                border-top: 5px solid var(--color-brand-primary);
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+            .navigation.is-active { max-height: 600px; }
+            
+            .navigation__list {
+                flex-direction: column;
+                padding: var(--space-md) 0;
+                gap: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .navigation__item {
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            }
+            
+            .navigation.is-active .navigation__item { opacity: 1; transform: translateY(0); }
+            .navigation.is-active .navigation__item:nth-child(1) { transition-delay: 0.1s; }
+            .navigation.is-active .navigation__item:nth-child(2) { transition-delay: 0.2s; }
+            .navigation.is-active .navigation__item:nth-child(3) { transition-delay: 0.3s; }
+            .navigation.is-active .navigation__item:nth-child(4) { transition-delay: 0.4s; }
+            .navigation.is-active .navigation__item:nth-child(5) { transition-delay: 0.5s; }
+            .navigation.is-active .navigation__item:nth-child(6) { transition-delay: 0.6s; }
+            
+            .navigation__link {
+                display: block;
+                padding: 15px 0;
+                justify-content: center;
+            }
+            
+            .navigation__cta {
+                margin-left: 0;
+                margin-top: var(--space-sm);
+                padding: 0 20px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .navigation__submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                border-top: none;
+                background: rgba(0, 77, 64, 0.03);
+                margin-top: 8px;
+            }
+            .navigation__submenu li a {
+                padding: 10px 0;
+            }
+
+            .hero-empresa__image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="main-header" role="banner" data-scroll-state="top">
+        <div class="container header__content">
+            <a href="inicio.html" class="header__logo" aria-label="Voltar para a Página Inicial">
+                <img src="imagens/logo-saint.png" alt="Saint Patrick - Infraestrutura" width="150" height="40">
+            </a>
+            
+            <nav class="navigation" aria-label="Navegação Principal" id="main-nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="inicio.html" class="navigation__link">
+                            Início
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="empresa.html" class="navigation__link navigation__link--active">
+                            Empresa
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--dropdown">
+                        <a href="servicos.html" class="navigation__link navigation__link--service" aria-expanded="false" aria-controls="submenu-servicos">
+                            Serviços <i class="fas fa-chevron-down navigation__icon"></i>
+                        </a>
+                        <ul class="navigation__submenu" id="submenu-servicos">
+                            <li><a href="#">Fresa & Capa</a></li>
+                            <li><a href="#">Tapa Valas</a></li>
+                            <li><a href="#">Selagem & Binder</a></li>
+                            <li><a href="#">Pintura Asfaltica</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            Projetos Realizados
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- BOTÃO CTA À DIREITA -->
+                <div class="navigation__cta">
+                    <a href="#" class="button button--cta">Faça uma Cotação</a>
+                </div>
+            </nav>
+            
+            <button id="menu-toggle" class="header__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Alternar Menu">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO DA EMPRESA -->
+        <section class="hero-empresa">
+            <div class="hero-empresa__overlay"></div>
+            <img src="imagens/empresa-hero.jpg" alt="Equipe Saint Patrick" class="hero-empresa__image">
+            
+            <div class="container hero-empresa__content">
+                <h1 class="heading-display text--light" data-aos="fade-up" data-aos-delay="100">Nossa História</h1>
+                <h2 class="h2-inline-bold-white" data-aos="fade-up" data-aos-delay="200">Excelência em infraestrutura há mais de 5 anos</h2>
+                
+                <p class="text-lead text--light" data-aos="fade-up" data-aos-delay="300">A Saint Patrick nasceu com o propósito de transformar a infraestrutura brasileira através de soluções inovadoras em pavimentação asfáltica, sempre priorizando qualidade, segurança e sustentabilidade.</p>
+                
+                <div class="hero-empresa__actions" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#historia" class="button button--secondary button--large">Conheça Nossa Trajetória <i class="fas fa-long-arrow-alt-down"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HISTÓRIA -->
+        <section id="historia" class="section-historia">
+            <div class="container">
+                <div class="historia-content">
+                    <div class="historia-texto">
+                        <h2 class="heading-secondary" data-aos="fade-right">Nossa Jornada</h2>
+                        <p data-aos="fade-right" data-aos-delay="100">Fundada em 2019, a Saint Patrick Infraestrutura surgiu da visão de engenheiros experientes que identificaram uma lacuna no mercado de pavimentação: a necessidade de uma empresa que unisse conhecimento técnico avançado, compromisso com prazos e qualidade superior.</p>
+                        <p data-aos="fade-right" data-aos-delay="200">Começamos nossas operações com foco na região metropolitana de São Paulo, rapidamente expandindo para atender clientes em todo o estado. Nossa abordagem centrada no cliente e nossa capacidade de entregar projetos complexos dentro do prazo estabelecido nos permitiu construir uma reputação sólida no mercado.</p>
+                        <p data-aos="fade-right" data-aos-delay="300">Ao longo dos anos, investimos continuamente em tecnologia, capacitação de nossa equipe e processos de qualidade, tornando-nos referência em soluções de infraestrutura asfáltica.</p>
+                    </div>
+                    <div class="historia-imagem" data-aos="fade-left" data-aos-delay="400">
+                        Fundação da Empresa - 2019
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DIFERENCIAIS -->
+        <section class="section-diferenciais">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Nossos Diferenciais</h2>
+                <div class="diferenciais-grid">
+                    <div class="diferencial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3 class="diferencial-title">Alta Performance</h3>
+                        <p>Utilizamos as mais avançadas tecnologias em pavimentação asfáltica, garantindo durabilidade superior e desempenho excepcional em todas as nossas obras.</p>
+                    </div>
+                    <div class="diferencial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="diferencial-title">Sustentabilidade</h3>
+                        <p>Pioneiros na utilização de RAP (Reciclagem de Pavimento Asfáltico), reduzindo o impacto ambiental e promovendo a economia circular na construção civil.</p>
+                    </div>
+                    <div class="diferencial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="diferencial-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="diferencial-title">Qualidade Certificada</h3>
+                        <p>Laboratório próprio com acreditação para testes e controle de qualidade, garantindo que todos os materiais atendam às mais rigorosas normas técnicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO EQUIPE -->
+        <section class="section-equipe">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Nossa Liderança</h2>
+                <div class="equipe-grid">
+                    <div class="membro-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="membro-imagem">
+                            Diretor Executivo
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome">Patrick Silva</h3>
+                            <p class="membro-cargo">Diretor Executivo</p>
+                            <p>Engenheiro Civil com mais de 15 anos de experiência em infraestrutura e gestão de projetos.</p>
+                        </div>
+                    </div>
+                    <div class="membro-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="membro-imagem">
+                            Diretora Técnica
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome">Ana Costa</h3>
+                            <p class="membro-cargo">Diretora Técnica</p>
+                            <p>Especialista em pavimentação asfáltica e controle de qualidade, com mestrado em Engenharia de Transportes.</p>
+                        </div>
+                    </div>
+                    <div class="membro-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="membro-imagem">
+                            Gerente de Operações
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome">Carlos Mendes</h3>
+                            <p class="membro-cargo">Gerente de Operações</p>
+                            <p>Responsável pela execução de obras e coordenação de equipes, com vasta experiência em logística operacional.</p>
+                        </div>
+                    </div>
+                    <div class="membro-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="membro-imagem">
+                            Coordenadora Comercial
+                        </div>
+                        <div class="membro-info">
+                            <h3 class="membro-nome">Mariana Lima</h3>
+                            <p class="membro-cargo">Coordenadora Comercial</p>
+                            <p>Responsável pelo relacionamento com clientes e desenvolvimento de novos negócios no setor de infraestrutura.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CERTIFICAÇÕES -->
+        <section class="section-certificacoes">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Certificações e Qualificações</h2>
+                <div class="certificacoes-grid">
+                    <div class="certificacao-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="certificacao-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>ISO 9001</h3>
+                        <p>Sistema de Gestão da Qualidade</p>
+                    </div>
+                    <div class="certificacao-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="certificacao-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>ISO 14001</h3>
+                        <p>Gestão Ambiental</p>
+                    </div>
+                    <div class="certificacao-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="certificacao-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>OHSAS 18001</h3>
+                        <p>Segurança e Saúde Ocupacional</p>
+                    </div>
+                    <div class="certificacao-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="certificacao-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>ANTT</h3>
+                        <p>Transporte de Cargas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO COMPROMISSO -->
+        <section class="section-compromisso">
+            <div class="container">
+                <div class="compromisso-content" data-aos="fade-up">
+                    <h2 class="heading-secondary text--light">Compromisso com o Futuro</h2>
+                    <p class="text-lead text--light">Na Saint Patrick, acreditamos que uma infraestrutura de qualidade é fundamental para o desenvolvimento econômico e social. Estamos comprometidos em construir não apenas estradas, mas também um futuro melhor para as próximas gerações, através de práticas sustentáveis e inovação constante.</p>
+                    <a href="#" class="button button--secondary button--large mt-4">Entre em Contato Conosco</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Contato</h3>
+                <p><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>R. Santos Dumont,1316 (Sala 4) - Ferraz/Sp</p>
+                <p><i class="fas fa-phone" style="margin-right: 8px; opacity: 0.7;"></i>Telefone: (11) 2869-5788 </p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px; opacity: 0.7;"></i>Email: saintpatrick.infraestrutura@gmail.com </p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-link" style="margin-right: 8px;"></i>Links Rápidos</h3>
+                <ul class="footer__list">
+                    <li><a href="empresa.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Quem Somos</a></li>
+                    <li><a href="servicos.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Nossos Serviços</a></li>
+                    <li><a href="empresa.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Portfólio</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-share-alt" style="margin-right: 8px;"></i>Siga-nos</h3>
+                <div class="footer__social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 Saint Patrick. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento" class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Fale conosco!</div>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const dropdownToggles = document.querySelectorAll('.navigation__link--service');
+
+            // Sticky Header
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        header.setAttribute('data-scroll-state', 'scrolled');
+                    } else {
+                        header.setAttribute('data-scroll-state', 'top');
+                    }
+                });
+                if (window.scrollY > 100) {
+                    header.setAttribute('data-scroll-state', 'scrolled');
+                }
+            }
+
+            // Menu Mobile
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    
+                    mainNav.classList.toggle('is-active');
+                    menuToggle.classList.toggle('is-active');
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    
+                    document.body.style.overflow = mainNav.classList.contains('is-active') ? 'hidden' : '';
+                });
+                
+                mainNav.querySelectorAll('.navigation__link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('is-active') && window.innerWidth <= 1024 && !link.closest('.navigation__item--dropdown')) {
+                            mainNav.classList.remove('is-active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('is-active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+            }
+
+            // Submenu Mobile (Acordeão)
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        
+                        const submenu = toggle.closest('.navigation__item--dropdown').querySelector('.navigation__submenu');
+                        const isSubmenuExpanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+                        
+                        document.querySelectorAll('.navigation__submenu').forEach(sub => {
+                            if (sub !== submenu) sub.style.maxHeight = '0';
+                        });
+                        document.querySelectorAll('.navigation__link--service').forEach(t => {
+                            if (t !== toggle) t.setAttribute('aria-expanded', 'false');
+                        });
+                        
+                        if (!isSubmenuExpanded) {
+                            submenu.style.maxHeight = submenu.scrollHeight + "px";
+                            toggle.setAttribute('aria-expanded', 'true');
+                        } else {
+                            submenu.style.maxHeight = '0';
+                            toggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            });
+
+            // AOS (Animate On Scroll) - Implementação simples
+            const aosElements = document.querySelectorAll('[data-aos]');
+            const aosObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const delay = element.getAttribute('data-aos-delay') ? parseInt(element.getAttribute('data-aos-delay')) : 0;
+                        
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.transform = 'none';
+                        }, delay);
+                        
+                        aosObserver.unobserve(element);
+                    }
+                });
+            }, { rootMargin: '0px 0px -150px 0px', threshold: 0.1 });
+
+            aosElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                
+                if (element.getAttribute('data-aos') === 'fade-up') {
+                    element.style.transform = 'translateY(30px)';
+                } else if (element.getAttribute('data-aos') === 'fade-right') {
+                    element.style.transform = 'translateX(-50px)';
+                } else if (element.getAttribute('data-aos') === 'fade-left') {
+                    element.style.transform = 'translateX(50px)';
+                } else if (element.getAttribute('data-aos') === 'zoom-in') {
+                    element.style.transform = 'scale(0.9)';
+                }
+                
+                aosObserver.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

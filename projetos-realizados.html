@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Realizados | Saint Patrick Infraestrutura</title>
+    <meta name="description" content="Explore nosso portfólio de projetos de pavimentação asfáltica. Mais de 150 projetos realizados com excelência e qualidade comprovada.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-brand-primary: #004d40;
+            --color-brand-secondary: #197855;
+            --color-accent: #41b6a3;
+            --color-robust: #343a40;
+            --color-text-header: #212529;
+            --color-text-body: #495057;
+            --color-bg-light: #f8f9fa;
+            --color-bg-white: #ffffff;
+            --color-gray-dark: #2d3748;
+            --color-gray-medium: #4a5568;
+            --color-gray-light: #718096;
+            --color-gray-very-light: #e2e8f0;
+            
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-weight-light: 300;
+            --font-weight-regular: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            --font-weight-black: 900;
+            
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 48px;
+            --space-xl: 80px;
+            --border-radius: 8px;
+            --border-radius-lg: 16px;
+            --transition-speed: 0.3s;
+            --transition-bounce: cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --shadow-deep: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
+        body {
+            font-family: var(--font-secondary);
+            line-height: 1.6;
+            color: var(--color-text-body);
+            background: var(--color-bg-light);
+            overflow-x: hidden;
+            font-weight: var(--font-weight-regular);
+        }
+
+        /* Container Principal */
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 var(--space-md); 
+        }
+
+        /* HEADER IDÊNTICO AO FORNECIDO */
+        .header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .header[data-scroll-state="scrolled"] {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+        }
+        .header__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            min-height: 80px;
+        }
+
+        .header__logo img {
+            transition: transform 0.3s ease;
+        }
+        .header__logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* NAVEGAÇÃO CENTRALIZADA COM BOTÃO À DIREITA - IDÊNTICA */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+        }
+
+        .navigation__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            justify-content: center;
+        }
+        .navigation__item { 
+            position: relative; 
+        }
+
+        .navigation__link {
+            color: var(--color-text-header);
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            letter-spacing: -0.2px;
+        }
+
+        .navigation__link i.fa-fw {
+            display: none;
+        }
+
+        .navigation__link:hover,
+        .navigation__link--active {
+            color: var(--color-brand-primary);
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.05) 0%, rgba(25, 120, 85, 0.05) 100%);
+        }
+
+        .navigation__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navigation__link:hover::after,
+        .navigation__link--active::after {
+            width: 80%;
+        }
+
+        .navigation__icon {
+            font-size: 0.7rem;
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        .navigation__item--dropdown:hover .navigation__icon {
+            transform: rotate(180deg);
+        }
+
+        .navigation__submenu {
+            position: absolute;
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            min-width: 280px;
+            padding: 12px;
+            border-radius: 12px;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-top: 3px solid var(--color-brand-secondary);
+            list-style: none;
+        }
+        .navigation__item--dropdown:hover .navigation__submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .navigation__submenu li {
+            margin: 0;
+        }
+        .navigation__submenu li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            color: var(--color-text-body);
+            transition: all 0.2s;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .navigation__submenu li a:hover {
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.08) 0%, rgba(25, 120, 85, 0.08) 100%);
+            color: var(--color-brand-primary);
+            transform: translateX(5px);
+        }
+        .navigation__submenu li a i {
+            display: none;
+        }
+
+        .navigation__cta {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .header__toggle { display: none; }
+
+        /* BOTÕES IDÊNTICOS */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-speed) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-size: 0.8rem;
+        }
+        .button--cta {
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            color: var(--color-bg-white);
+            box-shadow: 0 5px 15px rgba(25, 120, 85, 0.3);
+        }
+        .button--cta:hover {
+            background: linear-gradient(135deg, #41b6a3 0%, var(--color-brand-secondary) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(25, 120, 85, 0.5);
+        }
+        .button--secondary { 
+            background: transparent; 
+            color: var(--color-bg-white); 
+            border-color: var(--color-bg-white);
+            border-width: 2px;
+        }
+        .button--secondary:hover { 
+            background: var(--color-bg-white); 
+            color: var(--color-brand-primary); 
+            border-color: var(--color-bg-white); 
+            transform: translateY(-3px); 
+        }
+        .button--large { 
+            padding: 10px 28px;
+            font-size: 0.85rem;
+        }
+
+        /* Hero Section para Projetos */
+        .hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 10;
+            color: var(--color-bg-white);
+            max-width: 600px;
+        }
+        
+        .hero__actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .heading-display { 
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: var(--font-weight-black);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        
+        .heading-secondary { 
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: var(--font-weight-extrabold);
+            line-height: 1.2;
+        }
+        
+        .text-lead { 
+            font-size: 1.125rem; 
+            font-weight: var(--font-weight-light); 
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .text--light { color: var(--color-bg-white); }
+
+        /* Seção de Projetos */
+        .projects-section {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-white);
+        }
+        
+        .section__title {
+            position: relative;
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+        
+        .section__title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-brand-secondary) 0%, var(--color-brand-primary) 100%);
+            margin: var(--space-sm) auto 0;
+            border-radius: 2px;
+        }
+
+        /* Filtros Interativos */
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1.5px solid var(--color-brand-primary);
+            background: transparent;
+            color: var(--color-brand-primary);
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--transition-speed) var(--transition-bounce);
+            font-size: 0.8rem;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-brand-primary);
+            color: var(--color-bg-white);
+            transform: translateY(-1px);
+        }
+
+        /* Contador de Projetos */
+        .projects-counter {
+            text-align: center;
+            margin-bottom: var(--space-md);
+            font-size: 1rem;
+            color: var(--color-text-body);
+        }
+        
+        .counter-number {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-brand-primary);
+        }
+
+        /* Grid de Projetos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-md);
+        }
+
+        /* Cards de Projeto */
+        .project-card {
+            background: var(--color-bg-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s var(--transition-bounce);
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-gray-dark) 0%, var(--color-gray-medium) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-bg-white);
+            font-size: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-content {
+            padding: var(--space-md);
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, var(--color-accent) 100%);
+            color: var(--color-bg-white);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-xs);
+            color: var(--color-text-header);
+            line-height: 1.3;
+        }
+
+        .project-description {
+            color: var(--color-text-body);
+            margin-bottom: var(--space-sm);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .project-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
+            border-top: 1px solid var(--color-gray-very-light);
+        }
+
+        .project-info {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .project-info-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: var(--color-gray-light);
+        }
+        
+        .project-info-item i {
+            color: var(--color-brand-secondary);
+        }
+
+        /* Seção de Estatísticas */
+        .stats-section {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--color-gray-dark) 0%, var(--color-gray-medium) 100%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            color: var(--color-bg-white);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--transition-speed) ease;
+        }
+        
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-black);
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--color-bg-white);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Seção de Depoimentos */
+        .testimonials-section {
+            padding: var(--space-xl) 0;
+            background: var(--color-bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .testimonial-card {
+            background: var(--color-bg-white);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 3rem;
+            color: var(--color-brand-secondary);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            color: var(--color-text-body);
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-bg-white);
+            font-weight: var(--font-weight-bold);
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: var(--font-weight-semibold);
+        }
+        
+        .author-info p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--color-gray-light);
+        }
+
+        /* Seção CTA */
+        .cta-section {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+
+        /* FOOTER IDÊNTICO AO FORNECIDO */
+        .footer {
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%);
+            color: var(--color-bg-white);
+            padding: var(--space-lg) 0 0;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .footer a {
+            color: var(--color-bg-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover { color: var(--color-brand-secondary); }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            padding-bottom: var(--space-md);
+        }
+        .footer__col p { margin-bottom: 5px; font-size: 0.9rem; }
+        .footer__heading {
+            font-family: var(--font-primary);
+            color: var(--color-brand-secondary);
+            margin-bottom: var(--space-sm);
+            font-size: 1rem;
+            position: relative;
+            padding-left: var(--space-sm);
+        }
+        .footer__heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 80%;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+        .footer__list {
+            list-style: none;
+            padding: 0;
+        }
+        .footer__list li { margin-bottom: 8px; font-size: 0.9rem; }
+        .footer__social a {
+            margin-right: var(--space-sm);
+            transition: transform 0.3s;
+            color: var(--color-bg-white);
+        }
+        .footer__social a:hover {
+            transform: translateY(-3px);
+            color: var(--color-brand-secondary);
+        }
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) 0;
+            text-align: center;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botão WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            animation: pulse-whats 2s infinite;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.7);
+        }
+        
+        .whatsapp-button i {
+            color: white;
+            font-size: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes pulse-whats {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 1024px) {
+            .heading-display { font-size: 2.2rem; }
+            .heading-secondary { font-size: 1.8rem; }
+            
+            .header__toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 25px;
+                cursor: pointer;
+                z-index: 1010;
+                border: none;
+                background: transparent;
+                padding: 0;
+            }
+            .header__bar {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background: var(--color-text-header);
+                border-radius: 1.5px;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .header__toggle.is-active .header__bar:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            .header__toggle.is-active .header__bar:nth-child(1) {
+                transform: translateY(11px) rotate(45deg);
+            }
+            .header__toggle.is-active .header__bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+
+            .navigation {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                transition: max-height 0.4s ease-in-out;
+                border-top: 5px solid var(--color-brand-primary);
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+            .navigation.is-active { max-height: 600px; }
+            
+            .navigation__list {
+                flex-direction: column;
+                padding: var(--space-md) 0;
+                gap: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .navigation__item {
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            }
+            
+            .navigation.is-active .navigation__item { opacity: 1; transform: translateY(0); }
+            .navigation.is-active .navigation__item:nth-child(1) { transition-delay: 0.1s; }
+            .navigation.is-active .navigation__item:nth-child(2) { transition-delay: 0.2s; }
+            .navigation.is-active .navigation__item:nth-child(3) { transition-delay: 0.3s; }
+            .navigation.is-active .navigation__item:nth-child(4) { transition-delay: 0.4s; }
+            .navigation.is-active .navigation__item:nth-child(5) { transition-delay: 0.5s; }
+            .navigation.is-active .navigation__item:nth-child(6) { transition-delay: 0.6s; }
+            
+            .navigation__link {
+                display: block;
+                padding: 15px 0;
+                justify-content: center;
+            }
+            
+            .navigation__cta {
+                margin-left: 0;
+                margin-top: var(--space-sm);
+                padding: 0 20px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .navigation__submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                border-top: none;
+                background: rgba(0, 77, 64, 0.03);
+                margin-top: 8px;
+            }
+            .navigation__submenu li a {
+                padding: 10px 0;
+            }
+
+            .hero__actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-details {
+                flex-direction: column;
+                gap: var(--space-sm);
+                align-items: flex-start;
+            }
+
+            .project-info {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            .hero {
+                min-height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header idêntico ao fornecido -->
+    <header class="header" id="main-header" role="banner" data-scroll-state="top">
+        <div class="container header__content">
+            <a href="inicio.html" class="header__logo" aria-label="Voltar para a Página Inicial">
+                <img src="imagens/logo-saint.png" alt="Saint Patrick - Infraestrutura" width="150" height="40">
+            </a>
+            
+            <nav class="navigation" aria-label="Navegação Principal" id="main-nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="inicio.html" class="navigation__link">
+                            Início
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="empresa.html" class="navigation__link">
+                            Empresa
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--dropdown">
+                        <a href="servicos.html" class="navigation__link navigation__link--service" aria-expanded="false" aria-controls="submenu-servicos">
+                            Serviços <i class="fas fa-chevron-down navigation__icon"></i>
+                        </a>
+                        <ul class="navigation__submenu" id="submenu-servicos">
+                            <li><a href="#">Fresa & Capa</a></li>
+                            <li><a href="#">Tapa Valas</a></li>
+                            <li><a href="#">Selagem & Binder</a></li>
+                            <li><a href="#">Pintura Asfaltica</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="projetos.html" class="navigation__link navigation__link--active">
+                            Projetos Realizados
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="contato.html" class="navigation__link">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="navigation__cta">
+                    <a href="contato.html" class="button button--cta">Faça uma Cotação</a>
+                </div>
+            </nav>
+            
+            <button id="menu-toggle" class="header__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Alternar Menu">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="heading-display text--light">Nossos Projetos</h1>
+                    <p class="text-lead text--light">Mais de 150 projetos realizados com excelência e qualidade comprovada em pavimentação asfáltica.</p>
+                    <div class="hero__actions">
+                        <a href="#portfolio" class="button button--secondary">Ver Portfólio</a>
+                        <a href="contato.html" class="button button--cta button--large">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section class="projects-section" id="portfolio">
+            <div class="container">
+                <div class="section__title">
+                    <h2 class="heading-secondary">Portfólio de Projetos</h2>
+                    <p class="text-lead">Conheça alguns dos nossos principais trabalhos realizados</p>
+                </div>
+                
+                <div class="projects-counter">
+                    <span class="counter-number">150+</span> projetos realizados com sucesso
+                </div>
+
+                <!-- Filtros -->
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
+                    <button class="filter-btn" data-filter="pavimentacao">Pavimentação</button>
+                    <button class="filter-btn" data-filter="recapeamento">Recapeamento</button>
+                    <button class="filter-btn" data-filter="infraestrutura">Infraestrutura</button>
+                    <button class="filter-btn" data-filter="manutencao">Manutenção</button>
+                </div>
+
+                <!-- Grid de Projetos -->
+                <div class="projects-grid">
+                    <!-- Projeto 1 -->
+                    <div class="project-card" data-category="pavimentacao">
+                        <div class="project-image">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Pavimentação</span>
+                            <h3 class="project-title">Avenida Principal - Centro</h3>
+                            <p class="project-description">Pavimentação asfáltica completa da avenida central com drenagem integrada.</p>
+                            <div class="project-details">
+                                <div class="project-info">
+                                    <div class="project-info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>6 meses</span>
+                                    </div>
+                                    <div class="project-info-item">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        <span>2.5 km</span>
+                                    </div>
+                                </div>
+                                <button class="button button--cta button--small" data-project="1">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="project-card" data-category="recapeamento">
+                        <div class="project-image">
+                            <i class="fas fa-highway"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Recapeamento</span>
+                            <h3 class="project-title">Rodovia Estadual</h3>
+                            <p class="project-description">Recapeamento asfáltico de 15km de rodovia com reforço estrutural.</p>
+                            <div class="project-details">
+                                <div class="project-info">
+                                    <div class="project-info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>4 meses</span>
+                                    </div>
+                                    <div class="project-info-item">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        <span>15 km</span>
+                                    </div>
+                                </div>
+                                <button class="button button--cta button--small" data-project="2">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 -->
+                    <div class="project-card" data-category="infraestrutura">
+                        <div class="project-image">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Infraestrutura</span>
+                            <h3 class="project-title">Condomínio Residencial</h3>
+                            <p class="project-description">Infraestrutura viária completa para condomínio de alto padrão.</p>
+                            <div class="project-details">
+                                <div class="project-info">
+                                    <div class="project-info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>3 meses</span>
+                                    </div>
+                                    <div class="project-info-item">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        <span>8.5 km</span>
+                                    </div>
+                                </div>
+                                <button class="button button--cta button--small" data-project="3">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 -->
+                    <div class="project-card" data-category="manutencao">
+                        <div class="project-image">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Manutenção</span>
+                            <h3 class="project-title">Tapa-Valas Municipal</h3>
+                            <p class="project-description">Serviço de manutenção corretiva em vias urbanas do município.</p>
+                            <div class="project-details">
+                                <div class="project-info">
+                                    <div class="project-info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2 meses</span>
+                                    </div>
+                                    <div class="project-info-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>40 locais</span>
+                                    </div>
+                                </div>
+                                <button class="button button--cta button--small" data-project="4">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 -->
+                    <div class="project-card" data-category="pavimentacao">
+                        <div class="project-image">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Pavimentação</span>
+                            <h3 class="project-title">Via Expressa Industrial</h3>
+                            <p class="project-description">Pavimentação asfáltica para via de acesso ao distrito industrial.</p>
+                            <div class="project-details">
+                                <div class="project-info">
+                                    <div class="project-info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>5 meses</span>
+                                    </div>
+                                    <div class="project-info-item">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        <span>4.2 km</span>
+                                    </div>
+                                </div>
+                                <button class="button button--cta button--small" data-project="5">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 -->
+                    <div class="project-card" data-category="recapeamento">
+                        <div class="project-image">
+                            <i class="fas fa-highway"></i>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Recapeamento</span>
+                            <h3 class="project-title">Avenida Comercial</h3>
+                            <p class="project-description">Recapeamento e sinalização de avenida comercial movimentada.</p>
+                            <div class="project-details">
+                                <div class="project-info">
+                                    <div class="project-info-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>3 meses</span>
+                                    </div>
+                                    <div class="project-info-item">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        <span>3.8 km</span>
+                                    </div>
+                                </div>
+                                <button class="button button--cta button--small" data-project="6">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Estatísticas -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="85">0</span>
+                        <span class="stat-label">Km Pavimentados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label">Clientes Satisfeitos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section__title">
+                    <h2 class="heading-secondary">O que nossos clientes dizem</h2>
+                    <p class="text-lead">Depoimentos de quem já confiou em nosso trabalho</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"A Saint Patrick realizou um excelente trabalho na pavimentação da nossa avenida. Profissionalismo, qualidade e cumprimento de prazos."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JP</div>
+                            <div class="author-info">
+                                <h4>João Pereira</h4>
+                                <p>Prefeitura Municipal</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Serviço de alta qualidade e equipe extremamente competente. Superou nossas expectativas em todos os aspectos."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MS</div>
+                            <div class="author-info">
+                                <h4>Maria Silva</h4>
+                                <p>Construtora Alpha</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Profissionais qualificados e equipamentos modernos. O resultado final foi excelente e dentro do prazo estabelecido."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RC</div>
+                            <div class="author-info">
+                                <h4>Roberto Costa</h4>
+                                <p>Incorporadora Vértice</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="heading-secondary text--light">Pronto para iniciar seu projeto?</h2>
+                    <p class="text-lead text--light">Entre em contato conosco e solicite um orçamento personalizado</p>
+                    <div class="hero__actions justify-center">
+                        <a href="contato.html" class="button button--secondary">Fale Conosco</a>
+                        <a href="https://wa.me/5511999999999" class="button button--cta">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer idêntico ao fornecido -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Contato</h3>
+                <p><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>R. Santos Dumont,1316 (Sala 4) - Ferraz/Sp</p>
+                <p><i class="fas fa-phone" style="margin-right: 8px; opacity: 0.7;"></i>Telefone: (11) 2869-5788 </p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px; opacity: 0.7;"></i>Email: saintpatrick.infraestrutura@gmail.com </p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-link" style="margin-right: 8px;"></i>Links Rápidos</h3>
+                <ul class="footer__list">
+                    <li><a href="empresa.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Quem Somos</a></li>
+                    <li><a href="servicos.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Nossos Serviços</a></li>
+                    <li><a href="projetos.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Portfólio</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-share-alt" style="margin-right: 8px;"></i>Siga-nos</h3>
+                <div class="footer__social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 Saint Patrick. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento" class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const stats = document.querySelectorAll('.stat-item__number');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            // Header scroll effect
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        header.setAttribute('data-scroll-state', 'scrolled');
+                    } else {
+                        header.setAttribute('data-scroll-state', 'top');
+                    }
+                });
+                if (window.scrollY > 100) {
+                    header.setAttribute('data-scroll-state', 'scrolled');
+                }
+            }
+
+            // Menu mobile toggle
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    
+                    mainNav.classList.toggle('is-active');
+                    menuToggle.classList.toggle('is-active');
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    
+                    document.body.style.overflow = mainNav.classList.contains('is-active') ? 'hidden' : '';
+                });
+                
+                mainNav.querySelectorAll('.navigation__link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('is-active') && window.innerWidth <= 1024 && !link.closest('.navigation__item--dropdown')) {
+                            mainNav.classList.remove('is-active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('is-active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+            }
+
+            // Filtro de projetos
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Contador animado
+            if (stats.length > 0) {
+                const statsObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const target = entry.target;
+                            const finalValue = parseInt(target.getAttribute('data-count'));
+                            let startValue = 0;
+                            const duration = 2000;
+                            const step = finalValue / (duration / 16.6);
+                            
+                            const timer = setInterval(() => {
+                                startValue += step;
+                                if (startValue >= finalValue) {
+                                    startValue = finalValue;
+                                    clearInterval(timer);
+                                }
+                                target.textContent = Math.floor(startValue).toLocaleString('pt-BR');
+                            }, 16.6);
+                            
+                            observer.unobserve(target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                stats.forEach(stat => statsObserver.observe(stat));
+            }
+        });
+    </script>
+</body>
+</html>

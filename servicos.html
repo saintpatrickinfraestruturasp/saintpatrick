@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços | Saint Patrick - Soluções em Pavimentação</title>
+    <meta name="description" content="Conheça nossos serviços de pavimentação asfáltica, reciclagem sustentável e consultoria técnica especializada.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-brand-primary: #004d40;
+            --color-brand-secondary: #197855;
+            --color-robust: #343a40;
+            --color-text-header: #212529;
+            --color-text-body: #495057;
+            --color-bg-light: #f8f9fa;
+            --color-bg-white: #ffffff;
+            
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-weight-bold: 700;
+            --font-weight-extra-bold: 900;
+            
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 32px;
+            --space-lg: 64px;
+            --space-xl: 120px;
+            --border-radius: 12px;
+            --transition-speed: 0.4s;
+            --shadow-base: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-deep: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
+        
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
+        body {
+            font-family: var(--font-secondary);
+            line-height: 1.6;
+            color: var(--color-text-body);
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%);
+            overflow-x: hidden;
+        }
+        
+        .container { 
+            max-width: 1320px; 
+            margin: 0 auto; 
+            padding: 0 var(--space-md); 
+        }
+
+        /* TIPOGRAFIA */
+        h1, h2, h3 { 
+            font-family: var(--font-primary); 
+            color: var(--color-text-header); 
+            line-height: 1.2; 
+        }
+        
+        .hero h1, .hero p, .hero a, 
+        .bg--primary h2, .bg--primary p, 
+        .bg--robust h2, .bg--robust p { 
+            color: var(--color-bg-white); 
+        }
+        
+        .heading-display { 
+            font-size: 3.5rem; 
+            font-weight: var(--font-weight-extra-bold); 
+        }
+        
+        .h2-inline-bold-white { 
+            color: white; 
+            font-weight: bold; 
+            display: inline; 
+            font-size: 1.8rem; 
+        }
+        
+        .heading-secondary { 
+            font-size: 2.5rem; 
+        }
+        
+        .text-lead { 
+            font-size: 1.15rem; 
+            font-weight: 300; 
+            line-height: 1.7; 
+        }
+
+        /* CORES E FUNDOS */
+        .bg--primary { 
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, #005f50 100%); 
+        }
+        
+        .bg--robust { 
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%); 
+        }
+        
+        .bg--light { 
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%); 
+        }
+        
+        .text--light { 
+            color: var(--color-bg-white); 
+        }
+        
+        .text--secondary { 
+            color: var(--color-brand-secondary); 
+        }
+        
+        .text-center { 
+            text-align: center; 
+        }
+        
+        .mt-4 { 
+            margin-top: 2rem; 
+        }
+
+        /* GRID SYSTEM */
+        .grid { 
+            display: grid; 
+        }
+        
+        .grid--2-cols-split { 
+            grid-template-columns: 1.3fr 1fr; 
+        }
+        
+        .grid--3-cols { 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        }
+        
+        .grid--4-cols { 
+            grid-template-columns: repeat(4, 1fr); 
+        }
+        
+        .grid--gap-md { 
+            gap: var(--space-md); 
+        }
+        
+        .grid--gap-lg { 
+            gap: var(--space-lg); 
+        }
+
+        /* BOTÕES */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-speed) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-size: 0.8rem;
+        }
+        
+        .button--cta {
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            color: var(--color-bg-white);
+            box-shadow: 0 5px 15px rgba(25, 120, 85, 0.3);
+        }
+        
+        .button--cta:hover {
+            background: linear-gradient(135deg, #41b6a3 0%, var(--color-brand-secondary) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(25, 120, 85, 0.5);
+        }
+        
+        .button--secondary { 
+            background: transparent; 
+            color: var(--color-bg-white); 
+            border-color: var(--color-bg-white);
+            border-width: 2px;
+        }
+        
+        .button--secondary:hover { 
+            background: var(--color-bg-white); 
+            color: var(--color-brand-primary); 
+            border-color: var(--color-bg-white); 
+            transform: translateY(-3px); 
+        }
+        
+        .button--large { 
+            padding: 10px 28px;
+            font-size: 0.85rem;
+        }
+        
+        .button i { 
+            margin-left: var(--space-xs); 
+            font-size: 0.8rem;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header[data-scroll-state="scrolled"] {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .header__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            min-height: 80px;
+        }
+
+        .header__logo img {
+            transition: transform 0.3s ease;
+        }
+        
+        .header__logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* NAVEGAÇÃO */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+        }
+
+        .navigation__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            justify-content: center;
+        }
+        
+        .navigation__item { 
+            position: relative; 
+        }
+
+        .navigation__link {
+            color: var(--color-text-header);
+            text-decoration: none;
+            padding: 10px 16px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            letter-spacing: -0.2px;
+        }
+
+        .navigation__link:hover,
+        .navigation__link--active {
+            color: var(--color-brand-primary);
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.05) 0%, rgba(25, 120, 85, 0.05) 100%);
+        }
+
+        .navigation__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navigation__link:hover::after,
+        .navigation__link--active::after {
+            width: 80%;
+        }
+
+        .navigation__icon {
+            font-size: 0.7rem;
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .navigation__item--dropdown:hover .navigation__icon {
+            transform: rotate(180deg);
+        }
+
+        /* SUBMENU */
+        .navigation__submenu {
+            position: absolute;
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            min-width: 280px;
+            padding: 12px;
+            border-radius: 12px;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-top: 3px solid var(--color-brand-secondary);
+            list-style: none;
+        }
+        
+        .navigation__item--dropdown:hover .navigation__submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .navigation__submenu li {
+            margin: 0;
+        }
+        
+        .navigation__submenu li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            color: var(--color-text-body);
+            transition: all 0.2s;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        
+        .navigation__submenu li a:hover {
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.08) 0%, rgba(25, 120, 85, 0.08) 100%);
+            color: var(--color-brand-primary);
+            transform: translateX(5px);
+        }
+
+        /* BOTÃO CTA */
+        .navigation__cta {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .header__toggle { 
+            display: none; 
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #004d40 0%, #197855 100%);
+        }
+        
+        .hero__content {
+            z-index: 10;
+            color: var(--color-bg-white);
+            max-width: 900px;
+            padding-top: var(--space-lg);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+        
+        .hero__content h1,
+        .hero__content p {
+            text-align: left;
+        }
+        
+        .hero__actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            justify-content: flex-start;
+        }
+        
+        .hero__slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .hero__slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        
+        .hero__slide--active { 
+            opacity: 1; 
+        }
+        
+        .hero__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+            transform: scale(1.0);
+            transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .hero__slide--active .hero__image { 
+            transform: scale(1.05); 
+        }
+        
+        .hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* SEÇÕES */
+        .section { 
+            padding: var(--space-xl) 0; 
+            position: relative; 
+        }
+        
+        .section--padded-sm { 
+            padding: var(--space-lg) 0; 
+        }
+        
+        .section--padded-lg { 
+            padding: 120px 0; 
+        }
+
+        .section--relief {
+            position: relative;
+        }
+        
+        .section--relief::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, transparent 100%);
+            z-index: 1;
+        }
+        
+        .section--relief::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.05) 0%, transparent 100%);
+            z-index: 1;
+        }
+
+        .section__title {
+            position: relative;
+            text-align: center;
+            margin-bottom: var(--space-md);
+            font-size: 2.2rem;
+        }
+        
+        .section__title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-brand-secondary) 0%, var(--color-brand-primary) 100%);
+            margin: var(--space-sm) auto 0;
+            border-radius: 2px;
+        }
+
+        /* CARDS DE SERVIÇOS */
+        .service-card {
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: 
+                0 5px 20px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid transparent;
+            transition: all var(--transition-speed) ease-out;
+            padding: var(--space-md);
+            border-radius: var(--border-radius);
+            text-align: center;
+            position: relative;
+            transform: perspective(1000px) rotateY(0deg);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(25, 120, 85, 0.05) 0%, transparent 100%);
+            border-radius: var(--border-radius);
+            opacity: 0;
+            transition: opacity var(--transition-speed);
+        }
+        
+        .service-card:hover {
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                0 3px 8px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(-2deg) translateY(-8px);
+            border-top-color: var(--color-brand-secondary);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .service-card__icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform var(--transition-speed);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .service-card:hover .service-card__icon {
+            transform: rotateY(360deg) scale(1.1);
+        }
+        
+        .service-card__title {
+            margin: 1rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .service-card__features {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-sm) 0;
+            text-align: left;
+        }
+        
+        .service-card__features li {
+            margin-bottom: var(--space-xs);
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .service-card__features i {
+            color: var(--color-brand-secondary);
+            margin-right: var(--space-xs);
+            font-size: 0.8rem;
+        }
+
+        /* SEÇÃO LABORATÓRIO */
+        .section--lab {
+            position: relative;
+            padding: var(--space-xl) 0;
+            overflow: hidden;
+        }
+        
+        .lab-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: linear-gradient(135deg, #004d40 0%, #197855 100%);
+        }
+        
+        .lab-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.3) 2px, transparent 2px),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.3) 2px, transparent 2px),
+                radial-gradient(circle at 40% 40%, rgba(255,255,255,0.2) 1px, transparent 1px),
+                radial-gradient(circle at 60% 60%, rgba(255,255,255,0.2) 1px, transparent 1px);
+            background-size: 100px 100px, 150px 150px, 200px 200px, 250px 250px;
+            background-position: 0 0, 30px 60px, 120px 90px, 200px 30px;
+        }
+        
+        .lab-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* TAGS */
+        .tag {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-weight: var(--font-weight-bold);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .tag--primary {
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            color: var(--color-bg-white);
+        }
+
+        /* LISTAS */
+        .list--check {
+            list-style: none;
+            padding: 0;
+            margin-top: var(--space-md);
+        }
+        
+        .list--check li {
+            margin-bottom: var(--space-xs);
+            color: var(--color-bg-white);
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        
+        .list--check i {
+            color: var(--color-brand-secondary);
+            margin-right: var(--space-xs);
+            font-size: 1.1rem;
+        }
+
+        /* IMAGENS */
+        .image-container--zoom {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-deep);
+            overflow: hidden;
+            background: linear-gradient(135deg, #004d40 0%, #197855 100%);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ESTATÍSTICAS */
+        .stat-item {
+            text-align: center;
+            color: var(--color-bg-white);
+            position: relative;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-item__number {
+            font-size: 3rem;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-extra-bold);
+            line-height: 1;
+            display: block;
+            color: var(--color-bg-white);
+            background: linear-gradient(135deg, #ffffff 0%, #e9ecef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-item__label {
+            opacity: 0.9;
+            margin-top: var(--space-sm);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: var(--color-bg-white);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%);
+            color: var(--color-bg-white);
+            padding: var(--space-lg) 0 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: var(--color-bg-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover { 
+            color: var(--color-brand-secondary); 
+        }
+        
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            padding-bottom: var(--space-md);
+        }
+        
+        .footer__col p { 
+            margin-bottom: 5px; 
+            font-size: 0.9rem; 
+        }
+        
+        .footer__heading {
+            font-family: var(--font-primary);
+            color: var(--color-brand-secondary);
+            margin-bottom: var(--space-sm);
+            font-size: 1rem;
+            position: relative;
+            padding-left: var(--space-sm);
+        }
+        
+        .footer__heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 80%;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+        
+        .footer__list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer__list li { 
+            margin-bottom: 8px; 
+            font-size: 0.9rem; 
+        }
+        
+        .footer__social a {
+            margin-right: var(--space-sm);
+            transition: transform 0.3s;
+            color: var(--color-bg-white);
+        }
+        
+        .footer__social a:hover {
+            transform: translateY(-3px);
+            color: var(--color-brand-secondary);
+        }
+        
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) 0;
+            text-align: center;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* BOTÃO WHATSAPP */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            animation: pulse-whats 2s infinite;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.7);
+        }
+        
+        .whatsapp-button i {
+            color: white;
+            font-size: 28px;
+        }
+
+        @keyframes pulse-whats {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ANIMAÇÕES */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-duration: 0.8s;
+            transition-timing-function: ease-out;
+        }
+        
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: none;
+        }
+        
+        [data-aos="fade-up"] { transform: translateY(30px); }
+        [data-aos="fade-right"] { transform: translateX(-50px); }
+        [data-aos="fade-left"] { transform: translateX(50px); }
+        [data-aos="zoom-in"] { transform: scale(0.9); }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 1024px) {
+            .heading-display { font-size: 2.2rem; }
+            .heading-secondary { font-size: 1.8rem; }
+            .section--padded-lg { padding: var(--space-lg) 0; }
+            
+            .grid--2-cols-split,
+            .grid--4-cols { grid-template-columns: 1fr; }
+
+            .header__toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 25px;
+                cursor: pointer;
+                z-index: 1010;
+                border: none;
+                background: transparent;
+                padding: 0;
+            }
+            
+            .header__bar {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background: var(--color-text-header);
+                border-radius: 1.5px;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .header__toggle.is-active .header__bar:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            
+            .header__toggle.is-active .header__bar:nth-child(1) {
+                transform: translateY(11px) rotate(45deg);
+            }
+            
+            .header__toggle.is-active .header__bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+
+            .navigation {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                transition: max-height 0.4s ease-in-out;
+                border-top: 5px solid var(--color-brand-primary);
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+            
+            .navigation.is-active { max-height: 600px; }
+            
+            .navigation__list {
+                flex-direction: column;
+                padding: var(--space-md) 0;
+                gap: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            
+            .navigation__item {
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            }
+            
+            .navigation.is-active .navigation__item { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+            
+            .navigation__link {
+                display: block;
+                padding: 15px 0;
+                justify-content: center;
+            }
+            
+            .navigation__cta {
+                margin-left: 0;
+                margin-top: var(--space-sm);
+                padding: 0 20px;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .navigation__submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                border-top: none;
+                background: rgba(0, 77, 64, 0.03);
+                margin-top: 8px;
+            }
+            
+            .navigation__submenu li a {
+                padding: 10px 0;
+            }
+
+            .hero__actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="main-header" role="banner" data-scroll-state="top">
+        <div class="container header__content">
+            <a href="inicio.html" class="header__logo" aria-label="Voltar para a Página Inicial">
+                <img src="imagens/logo-saint.png" alt="Saint Patrick - Infraestrutura" width="150" height="40">
+            </a>
+            
+            <nav class="navigation" aria-label="Navegação Principal" id="main-nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="inicio.html" class="navigation__link">
+                            Início
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="empresa.html" class="navigation__link">
+                            Empresa
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--dropdown">
+                        <a href="servicos.html" class="navigation__link navigation__link--active navigation__link--service" aria-expanded="false" aria-controls="submenu-servicos">
+                            Serviços <i class="fas fa-chevron-down navigation__icon"></i>
+                        </a>
+                        <ul class="navigation__submenu" id="submenu-servicos">
+                            <li><a href="#pavimentacao">Pavimentação CBUQ</a></li>
+                            <li><a href="#reciclagem">Reciclagem RAP</a></li>
+                            <li><a href="#consultoria">Consultoria Técnica</a></li>
+                            <li><a href="#manutencao">Manutenção Asfáltica</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="projetos.html" class="navigation__link">
+                            Projetos Realizados
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="contato.html" class="navigation__link">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="navigation__cta">
+                    <a href="cotacao.html" class="button button--cta">Faça uma Cotação</a>
+                </div>
+            </nav>
+            
+            <button id="menu-toggle" class="header__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Alternar Menu">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero__slider" role="region" aria-label="Carrossel de Projetos de Pavimentação">
+                <div class="hero__slide hero__slide--active" data-slide="1">
+                    <img src="imagens/servicos-hero-1.jpg" alt="Pavimentação asfáltica em rodovia" class="hero__image">
+                </div>
+                <div class="hero__slide" data-slide="2">
+                    <img src="imagens/servicos-hero-2.jpg" alt="Reciclagem de asfalto" class="hero__image">
+                </div>
+                <div class="hero__slide" data-slide="3">
+                    <img src="imagens/servicos-hero-3.jpg" alt="Laboratório de engenharia" class="hero__image">
+                </div>
+            </div>
+            <div class="hero__overlay"></div>
+            
+            <div class="container hero__content">
+                <h1 class="heading-display text--light" data-aos="fade-up" data-aos-delay="100">Nossos Serviços</h1>
+                <h2 class="h2-inline-bold-white" data-aos="fade-up" data-aos-delay="200">Excelência em Pavimentação Asfáltica</h2>
+                
+                <p class="text-lead text--light" data-aos="fade-up" data-aos-delay="300">
+                    Soluções completas em infraestrutura asfáltica, desde a pavimentação de alto desempenho 
+                    até a reciclagem sustentável e consultoria técnica especializada.
+                </p>
+                
+                <div class="hero__actions" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#servicos" class="button button--cta button--large">Conhecer Serviços</a>
+                    <a href="cotacao.html" class="button button--secondary button--large">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS PRINCIPAIS -->
+        <section id="servicos" class="section section--padded-lg section--relief">
+            <div class="container">
+                <h2 class="section__title" data-aos="fade-up">Nossas Soluções em Infraestrutura</h2>
+                
+                <div class="grid grid--3-cols grid--gap-md">
+                    <!-- Pavimentação CBUQ -->
+                    <article class="service-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="service-card__icon"><i class="fas fa-road"></i></div>
+                        <h3 class="service-card__title">Pavimentação CBUQ</h3>
+                        <p>Concreto Betuminoso Usinado a Quente de alto desempenho para vias de tráfego intenso.</p>
+                        <ul class="service-card__features">
+                            <li><i class="fas fa-check"></i> Alto módulo de resiliência</li>
+                            <li><i class="fas fa-check"></i> Resistência à fadiga</li>
+                            <li><i class="fas fa-check"></i> Durabilidade superior</li>
+                            <li><i class="fas fa-check"></i> Garantia de 5 anos</li>
+                        </ul>
+                        <a href="#pavimentacao" class="button button--cta mt-4">Saiba Mais</a>
+                    </article>
+
+                    <!-- Reciclagem RAP -->
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card__icon"><i class="fas fa-recycle"></i></div>
+                        <h3 class="service-card__title">Reciclagem RAP</h3>
+                        <p>Reciclagem de Pavimento Asfáltico com tecnologia sustentável e economia de recursos.</p>
+                        <ul class="service-card__features">
+                            <li><i class="fas fa-check"></i> Redução de custos em 30%</li>
+                            <li><i class="fas fa-check"></i> Sustentabilidade ambiental</li>
+                            <li><i class="fas fa-check"></i> Qualidade certificada</li>
+                            <li><i class="fas fa-check"></i> Até 40% de material reciclado</li>
+                        </ul>
+                        <a href="#reciclagem" class="button button--cta mt-4">Saiba Mais</a>
+                    </article>
+
+                    <!-- Consultoria Técnica -->
+                    <article class="service-card" data-aos="fade-left" data-aos-delay="300">
+                        <div class="service-card__icon"><i class="fas fa-flask"></i></div>
+                        <h3 class="service-card__title">Consultoria Técnica</h3>
+                        <p>Serviços laboratoriais especializados e fiscalização de obras com padrão internacional.</p>
+                        <ul class="service-card__features">
+                            <li><i class="fas fa-check"></i> Ensaios de desempenho</li>
+                            <li><i class="fas fa-check"></i> Análise de custo-benefício</li>
+                            <li><i class="fas fa-check"></i> Fiscalização especializada</li>
+                            <li><i class="fas fa-check"></i> Laboratório acreditado</li>
+                        </ul>
+                        <a href="#consultoria" class="button button--cta mt-4">Saiba Mais</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAVIMENTAÇÃO CBUQ -->
+        <section id="pavimentacao" class="section section--lab section--relief">
+            <div class="lab-background"></div>
+            <div class="lab-pattern"></div>
+            
+            <div class="container lab-content">
+                <div class="grid grid--2-cols-split grid--gap-lg">
+                    <div class="content-box content-box--light" data-aos="fade-right">
+                        <span class="tag tag--primary">Alta Performance</span>
+                        <h2 class="heading-secondary text--light">Pavimentação CBUQ de Alto Módulo</h2>
+                        <p class="text-lead text--light">
+                            Nossa pavimentação asfáltica é projetada para superar as especificações padrão, 
+                            entregando vida útil significativamente maior comprovada por ensaios avançados de fadiga.
+                        </p>
+                        <ul class="list list--check">
+                            <li><i class="fas fa-check-circle"></i> Design de Mistura Superpave otimizado</li>
+                            <li><i class="fas fa-check-circle"></i> Uso de Asfalto Modificado por Polímero (PMB)</li>
+                            <li><i class="fas fa-check-circle"></i> Controle de compactação com tecnologia de ponta</li>
+                            <li><i class="fas fa-check-circle"></i> Garantia estendida de 5 anos</li>
+                        </ul>
+                        <a href="cotacao.html" class="button button--secondary mt-4">Solicitar Orçamento</a>
+                    </div>
+                    
+                    <figure class="image-container image-container--zoom" data-aos="fade-left" data-aos-delay="200">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                            Pavimentação CBUQ Premium
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECICLAGEM RAP -->
+        <section id="reciclagem" class="section section--padded-lg section--relief">
+            <div class="container">
+                <div class="grid grid--2-cols-split grid--gap-lg">
+                    <figure class="image-container image-container--zoom" data-aos="fade-right" data-aos-delay="200">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; background: linear-gradient(135deg, #4CAF50, #45a049);">
+                            Reciclagem Asfáltica RAP
+                        </div>
+                    </figure>
+                    
+                    <div class="content-box" data-aos="fade-left">
+                        <span class="tag tag--primary" style="background: linear-gradient(135deg, #4CAF50, #45a049);">
+                            Sustentabilidade
+                        </span>
+                        <h2 class="section__title">Reciclagem Asfáltica (RAP)</h2>
+                        <p class="text-lead">
+                            Utilizamos o material fresado (RAP) do seu próprio projeto, processado com alta tecnologia 
+                            e aditivos rejuvenescedores, garantindo performance técnica e máxima economia.
+                        </p>
+                        
+                        <h3 class="section__subtitle">Vantagens do RAP</h3>
+                        <ul class="service-card__features">
+                            <li><i class="fas fa-check" style="color: #4CAF50;"></i> Redução de 30% nos custos de material</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50;"></i> Diminuição da pegada de carbono</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50;"></i> Menor extração de recursos naturais</li>
+                            <li><i class="fas fa-check" style="color: #4CAF50;"></i> Qualidade equivalente ao material virgem</li>
+                        </ul>
+                        <a href="cotacao.html" class="button button--cta mt-4" style="background: linear-gradient(135deg, #4CAF50, #45a049); border-color: #4CAF50;">
+                            Consultar Sustentabilidade
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONSULTORIA -->
+        <section id="consultoria" class="section bg--primary section--relief">
+            <div class="container">
+                <h2 class="section__title text--light" data-aos="fade-up">Consultoria e Laboratório Especializado</h2>
+                
+                <div class="grid grid--3-cols grid--gap-md">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <span class="stat-item__number" data-target="1500">0</span>
+                        <p class="stat-item__label">Ensaios Realizados</p>
+                    </div>
+                    
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <span class="stat-item__number" data-target="98">0</span>
+                        <span style="font-size: 1.2rem;">%</span>
+                        <p class="stat-item__label">Precisão nos Laudos</p>
+                    </div>
+                    
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <span class="stat-item__number" data-target="50">0</span>
+                        <span style="font-size: 1.2rem;">+</span>
+                        <p class="stat-item__label">Projetos Fiscalizados</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid--2-cols-split grid--gap-lg mt-5">
+                    <div class="content-box" data-aos="fade-right">
+                        <h3 class="text--light">Serviços de Consultoria</h3>
+                        <ul class="list list--check">
+                            <li><i class="fas fa-check-circle"></i> Ensaios de Módulo e Fadiga em misturas asfálticas</li>
+                            <li><i class="fas fa-check-circle"></i> Análise de Custo/Benefício (Life Cycle Cost)</li>
+                            <li><i class="fas fa-check-circle"></i> Auditoria de usinas e obras de terceiros</li>
+                            <li><i class="fas fa-check-circle"></i> Desenho de misturas asfálticas personalizadas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-box" data-aos="fade-left">
+                        <h3 class="text--light">Laboratório Móvel</h3>
+                        <ul class="list list--check">
+                            <li><i class="fas fa-check-circle"></i> Ensaios in loco com equipamentos de última geração</li>
+                            <li><i class="fas fa-check-circle"></i> Controle de qualidade durante a execução</li>
+                            <li><i class="fas fa-check-circle"></i> Análise imediata de resultados</li>
+                            <li><i class="fas fa-check-circle"></i> Certificação e laudos técnicos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section id="contact-cta" class="section section--cta text-center section--relief" style="background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);">
+            <div class="container" data-aos="fade-in">
+                <h2 class="section__title heading-secondary" style="color: var(--color-text-header);">
+                    Pronto para transformar sua infraestrutura?
+                </h2>
+                <p class="text-lead" style="color: var(--color-text-body);">
+                    Entre em contato com nossa equipe técnica para uma análise personalizada do seu projeto.
+                </p>
+                <div class="hero__actions justify-center">
+                    <a href="contato.html" class="button button--cta button--large">Fale com Nossos Especialistas</a>
+                    <a href="cotacao.html" class="button button--secondary button--large">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-map-marker-alt"></i> Contato</h3>
+                <p><i class="fas fa-building"></i> R. Santos Dumont,1316 (Sala 4) - Ferraz/Sp</p>
+                <p><i class="fas fa-phone"></i> Telefone: (11) 2869-5788</p>
+                <p><i class="fas fa-envelope"></i> Email: saintpatrick.infraestrutura@gmail.com</p>
+            </div>
+            
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-link"></i> Links Rápidos</h3>
+                <ul class="footer__list">
+                    <li><a href="empresa.html"><i class="fas fa-chevron-right"></i> Quem Somos</a></li>
+                    <li><a href="servicos.html"><i class="fas fa-chevron-right"></i> Nossos Serviços</a></li>
+                    <li><a href="projetos.html"><i class="fas fa-chevron-right"></i> Projetos Realizados</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-share-alt"></i> Siga-nos</h3>
+                <div class="footer__social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 Saint Patrick. Todos os direitos reservados. | 
+                   <a href="#">Política de Privacidade</a> | 
+                   <a href="#">Termos de Uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20serviços%20de%20pavimentação" 
+       class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Elementos DOM
+            const header = document.getElementById('main-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const stats = document.querySelectorAll('.stat-item__number');
+            const aosElements = document.querySelectorAll('[data-aos]');
+            const dropdownToggles = document.querySelectorAll('.navigation__link--service');
+
+            // Sticky Header
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        header.setAttribute('data-scroll-state', 'scrolled');
+                    } else {
+                        header.setAttribute('data-scroll-state', 'top');
+                    }
+                });
+                
+                if (window.scrollY > 100) {
+                    header.setAttribute('data-scroll-state', 'scrolled');
+                }
+            }
+
+            // Menu Mobile
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    
+                    mainNav.classList.toggle('is-active');
+                    menuToggle.classList.toggle('is-active');
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    
+                    document.body.style.overflow = mainNav.classList.contains('is-active') ? 'hidden' : '';
+                });
+                
+                // Fechar menu ao clicar em link
+                mainNav.querySelectorAll('.navigation__link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('is-active') && window.innerWidth <= 1024 && !link.closest('.navigation__item--dropdown')) {
+                            mainNav.classList.remove('is-active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('is-active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+            }
+
+            // Submenu Mobile
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        
+                        const submenu = toggle.closest('.navigation__item--dropdown').querySelector('.navigation__submenu');
+                        const isSubmenuExpanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+                        
+                        // Fechar outros submenus
+                        document.querySelectorAll('.navigation__submenu').forEach(sub => {
+                            if (sub !== submenu) sub.style.maxHeight = '0';
+                        });
+                        
+                        document.querySelectorAll('.navigation__link--service').forEach(t => {
+                            if (t !== toggle) t.setAttribute('aria-expanded', 'false');
+                        });
+                        
+                        // Alternar submenu atual
+                        if (!isSubmenuExpanded) {
+                            submenu.style.maxHeight = submenu.scrollHeight + "px";
+                            toggle.setAttribute('aria-expanded', 'true');
+                        } else {
+                            submenu.style.maxHeight = '0';
+                            toggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            });
+
+            // Animações AOS
+            const aosObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const delay = element.getAttribute('data-aos-delay') ? parseInt(element.getAttribute('data-aos-delay')) : 0;
+                        
+                        setTimeout(() => {
+                            element.classList.add('aos-animate');
+                        }, delay);
+                        
+                        aosObserver.unobserve(element);
+                    }
+                });
+            }, { rootMargin: '0px 0px -150px 0px', threshold: 0.1 });
+
+            aosElements.forEach(element => aosObserver.observe(element));
+
+            // Contadores de Estatísticas
+            if (stats.length > 0) {
+                const statsObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const target = entry.target;
+                            const finalValue = parseInt(target.getAttribute('data-target'));
+                            let startValue = 0;
+                            const duration = 2000;
+                            const step = finalValue / (duration / 16.6);
+                            
+                            const timer = setInterval(() => {
+                                startValue += step;
+                                if (startValue >= finalValue) {
+                                    startValue = finalValue;
+                                    clearInterval(timer);
+                                }
+                                target.textContent = Math.floor(startValue).toLocaleString('pt-BR');
+                            }, 16.6);
+                            
+                            observer.unobserve(target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                stats.forEach(stat => statsObserver.observe(stat));
+            }
+
+            // Carrossel Hero
+            const heroSlider = document.querySelector('.hero__slider');
+            if (heroSlider) {
+                const slides = heroSlider.querySelectorAll('.hero__slide');
+                let currentSlide = 0;
+                const intervalTime = 6000;
+                
+                const updateSlider = (index) => {
+                    slides.forEach(slide => slide.classList.remove('hero__slide--active'));
+                    slides[index].classList.add('hero__slide--active');
+                    currentSlide = index;
+                };
+                
+                const nextSlide = () => {
+                    let nextIndex = (currentSlide + 1) % slides.length;
+                    updateSlider(nextIndex);
+                };
+                
+                updateSlider(0);
+                let sliderInterval = setInterval(nextSlide, intervalTime);
+            }
+
+            // Scroll Suave para Âncoras
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && document.querySelector(href)) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        const headerOffset = 100;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Saint Patrick Infraestrutura</title>
+    <meta name="description" content="Entre em contato com a Saint Patrick Infraestrutura. Líder em soluções de pavimentação asfáltica de alto desempenho.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-brand-primary: #004d40;
+            --color-brand-secondary: #197855;
+            --color-robust: #343a40;
+            --color-text-header: #212529;
+            --color-text-body: #495057;
+            --color-bg-light: #f8f9fa;
+            --color-bg-white: #ffffff;
+            --color-form-bg: #1a1a1a;
+            --color-form-text: #ffffff;
+            
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            --font-weight-bold: 700;
+            --font-weight-extra-bold: 900;
+            
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 32px;
+            --space-lg: 64px;
+            --space-xl: 120px;
+            --border-radius: 12px;
+            --transition-speed: 0.4s;
+            --shadow-base: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --shadow-deep: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-secondary);
+            line-height: 1.6;
+            color: var(--color-text-body);
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%);
+            overflow-x: hidden;
+        }
+        .container { max-width: 1320px; margin: 0 auto; padding: 0 var(--space-md); }
+
+        h1, h2, h3 { font-family: var(--font-primary); color: var(--color-text-header); line-height: 1.2; }
+        .hero h1, .hero p, .hero a, .bg--primary h2, .bg--primary p, .bg--robust h2, .bg--robust p { color: var(--color-bg-white); }
+        .heading-display { font-size: 3.5rem; font-weight: var(--font-weight-extra-bold); }
+        .h2-inline-bold-white { color: white; font-weight: bold; display: inline; font-size: 1.8rem; }
+        .heading-secondary { font-size: 2.5rem; }
+        .text-lead { font-size: 1.15rem; font-weight: 300; line-height: 1.7; }
+
+        .bg--primary { 
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, #005f50 100%); 
+        }
+        .bg--robust { 
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%); 
+        }
+        .bg--light { 
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%); 
+        }
+        .bg--primary-gradient { 
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, #005f50 100%); 
+        }
+        .text--light { color: var(--color-bg-white); }
+        .text--secondary { color: var(--color-brand-secondary); }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 2rem; }
+
+        .grid { display: grid; }
+        .grid--2-cols-split { grid-template-columns: 1.3fr 1fr; }
+        .grid--3-cols { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid--4-cols { grid-template-columns: repeat(4, 1fr); }
+        .grid--5-cols { grid-template-columns: repeat(5, 1fr); }
+        .grid--gap-md { gap: var(--space-md); }
+        .grid--gap-lg { gap: var(--space-lg); }
+
+        /* BOTÕES COM GRADIENTES */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-speed) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            font-size: 0.9rem;
+        }
+        .button--cta {
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            color: var(--color-bg-white);
+            box-shadow: 0 5px 15px rgba(25, 120, 85, 0.3);
+        }
+        .button--cta:hover {
+            background: linear-gradient(135deg, #41b6a3 0%, var(--color-brand-secondary) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(25, 120, 85, 0.5);
+        }
+        .button--secondary { 
+            background: transparent; 
+            color: var(--color-bg-white); 
+            border-color: var(--color-bg-white);
+            border-width: 2px;
+        }
+        .button--secondary:hover { 
+            background: var(--color-bg-white); 
+            color: var(--color-brand-primary); 
+            border-color: var(--color-bg-white); 
+            transform: translateY(-3px); 
+        }
+        .button--large { 
+            padding: 14px 32px;
+            font-size: 1rem;
+        }
+        .button--link { 
+            background: none; 
+            border: none; 
+            font-weight: 500; 
+            opacity: 0.9; 
+            color: var(--color-bg-white); 
+            font-size: 0.9rem;
+        }
+        .button--link:hover { 
+            opacity: 1; 
+            color: var(--color-brand-secondary); 
+        }
+        .button--link i { 
+            margin-left: var(--space-xs); 
+            transition: transform 0.3s; 
+        }
+        .button--link:hover i { 
+            transform: translateX(4px); 
+        }
+        .button i { 
+            margin-left: var(--space-xs); 
+            font-size: 0.9rem;
+        }
+
+        /* HEADER COM GRADIENTE E MENU CENTRALIZADO */
+        .header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .header[data-scroll-state="scrolled"] {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+        }
+        .header__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            min-height: 80px;
+        }
+
+        .header__logo img {
+            transition: transform 0.3s ease;
+        }
+        .header__logo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* NAVEGAÇÃO CENTRALIZADA */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1;
+        }
+
+        .navigation__list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            justify-content: center;
+        }
+        .navigation__item { 
+            position: relative; 
+        }
+
+        .navigation__link {
+            color: var(--color-text-header);
+            text-decoration: none;
+            padding: 12px 18px;
+            font-weight: 700;
+            font-size: 0.8rem; /* Diminuído de 0.9rem para 0.8rem */
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            letter-spacing: -0.2px;
+        }
+
+        .navigation__link:hover,
+        .navigation__link--active {
+            color: var(--color-brand-primary);
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.05) 0%, rgba(25, 120, 85, 0.05) 100%);
+        }
+
+        /* LINHA ABAIXO DO MENU AO PASSAR O MOUSE */
+        .navigation__link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navigation__link:hover::after,
+        .navigation__link--active::after {
+            width: 80%;
+        }
+
+        .navigation__icon {
+            font-size: 0.7rem;
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        .navigation__item--dropdown:hover .navigation__icon {
+            transform: rotate(180deg);
+        }
+
+        /* SUBMENU ELEGANTE */
+        .navigation__submenu {
+            position: absolute;
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            min-width: 280px;
+            padding: 12px;
+            border-radius: 12px;
+            z-index: 10;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-top: 3px solid var(--color-brand-secondary);
+            list-style: none;
+        }
+        .navigation__item--dropdown:hover .navigation__submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .navigation__submenu li {
+            margin: 0;
+        }
+        .navigation__submenu li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            color: var(--color-text-body);
+            transition: all 0.2s;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .navigation__submenu li a:hover {
+            background: linear-gradient(135deg, rgba(0, 77, 64, 0.08) 0%, rgba(25, 120, 85, 0.08) 100%);
+            color: var(--color-brand-primary);
+            transform: translateX(5px);
+        }
+
+        .header__toggle { display: none; }
+
+        /* HERO SECTION COM GRADIENTE */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #004d40 0%, #197855 100%);
+        }
+        .hero__content {
+            z-index: 10;
+            color: var(--color-bg-white);
+            max-width: 900px;
+            padding-top: var(--space-lg);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+        .hero__content h1,
+        .hero__content p {
+            text-align: left;
+        }
+        .hero__actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            justify-content: flex-start;
+        }
+        .hero__slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .hero__slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        .hero__slide--active { opacity: 1; }
+        .hero__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+            transform: scale(1.0);
+            transition: transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .hero__slide--active .hero__image { transform: scale(1.05); }
+        .hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+        }
+        .hero__indicators {
+            position: absolute;
+            bottom: var(--space-md);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 15;
+            display: flex;
+            gap: 10px;
+        }
+        .hero__indicator {
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .hero__indicator--active {
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            transform: scale(1.2);
+        }
+
+        /* SEÇÃO DE CONTATO */
+        .contact-section {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-top: var(--space-md);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: var(--shadow-base);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+
+        .contact-info h3 {
+            color: var(--color-brand-primary);
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+        }
+
+        .contact-details {
+            list-style: none;
+            padding: 0;
+            margin-bottom: var(--space-lg);
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-md);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-details li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-icon {
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--space-sm);
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text h4 {
+            font-family: var(--font-primary);
+            color: var(--color-text-header);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-text p {
+            color: var(--color-text-body);
+            margin-bottom: 5px;
+        }
+
+        .contact-text a {
+            color: var(--color-brand-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .contact-text a:hover {
+            color: var(--color-brand-primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FORMULÁRIO DE CONTATO - ESTILO PRETO COM LETRAS BRANCAS */
+        .contact-form {
+            background: var(--color-form-bg);
+            box-shadow: var(--shadow-base);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            position: relative;
+            overflow: hidden;
+            color: var(--color-form-text);
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+
+        .contact-form h3 {
+            color: var(--color-form-text);
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--color-form-text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--color-form-text);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-brand-secondary);
+            box-shadow: 0 0 0 3px rgba(25, 120, 85, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ESTILO ESPECÍFICO PARA SELECT */
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        select.form-control option {
+            background: var(--color-form-bg);
+            color: var(--color-form-text);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #41b6a3 100%);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(25, 120, 85, 0.3);
+        }
+
+        .form-submit:hover {
+            background: linear-gradient(135deg, #41b6a3 0%, var(--color-brand-secondary) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(25, 120, 85, 0.5);
+        }
+
+        .form-feedback {
+            padding: 12px;
+            border-radius: var(--border-radius);
+            margin-bottom: var(--space-md);
+            display: none;
+        }
+
+        .form-feedback.error {
+            background: rgba(220, 53, 69, 0.1);
+            color: #ff6b6b;
+            border: 1px solid rgba(220, 53, 69, 0.2);
+            display: block;
+        }
+
+        .form-feedback.success {
+            background: rgba(25, 135, 84, 0.1);
+            color: #51cf66;
+            border: 1px solid rgba(25, 135, 84, 0.2);
+            display: block;
+        }
+
+        /* IMAGEM DE CONTATO */
+        .contact-image {
+            width: 100%;
+            height: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-base);
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* MAPA */
+        .map-section {
+            padding: var(--space-lg) 0;
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .map-wrapper {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-base);
+            height: 400px;
+            background: #e9ecef;
+            position: relative;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            color: var(--color-text-body);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: var(--space-sm);
+            color: var(--color-brand-secondary);
+        }
+
+        /* SEÇÃO DE VANTAGENS */
+        .advantages-section {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+        .advantage-card {
+            background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+            box-shadow: var(--shadow-base);
+            border-radius: var(--border-radius);
+            padding: var(--space-lg);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-deep);
+        }
+
+        .advantage-icon {
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-sm);
+        }
+
+        .advantage-card h3 {
+            margin-bottom: var(--space-sm);
+            font-size: 1.3rem;
+        }
+
+        /* SEÇÕES COM GRADIENTES */
+        .section { 
+            padding: var(--space-xl) 0; 
+            position: relative; 
+        }
+        .section--padded-sm { padding: var(--space-lg) 0; }
+        .section--padded-lg { padding: 120px 0; }
+
+        /* EFEITO DE RELEVO ENTRE SEÇÕES */
+        .section--relief {
+            position: relative;
+        }
+        
+        .section--relief::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, transparent 100%);
+            z-index: 1;
+        }
+        
+        .section--relief::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.05) 0%, transparent 100%);
+            z-index: 1;
+        }
+
+        .section__title {
+            position: relative;
+            text-align: center;
+            margin-bottom: var(--space-md);
+            font-size: 2.2rem;
+        }
+        .section__title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-brand-secondary) 0%, var(--color-brand-primary) 100%);
+            margin: var(--space-sm) auto 0;
+            border-radius: 2px;
+        }
+        .section__subtitle {
+            font-size: 1rem;
+            color: var(--color-brand-primary);
+            margin-bottom: var(--space-sm);
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+        }
+
+        /* FORMULÁRIOS DE COTAÇÃO E CONTATO */
+        .form-section {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #e9ecef 100%);
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .form-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .form-tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--color-text-body);
+            position: relative;
+        }
+
+        .form-tab.active {
+            color: var(--color-brand-primary);
+        }
+
+        .form-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+            transition: width 0.3s;
+        }
+
+        .form-tab.active::after {
+            width: 100%;
+        }
+
+        .form-content {
+            display: none;
+        }
+
+        .form-content.active {
+            display: block;
+        }
+
+        /* FOOTER COM GRADIENTE */
+        .footer {
+            background: linear-gradient(135deg, var(--color-robust) 0%, #495057 100%);
+            color: var(--color-bg-white);
+            padding: var(--space-lg) 0 0;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: var(--color-bg-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover { color: var(--color-brand-secondary); }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-md);
+            padding-bottom: var(--space-md);
+        }
+        .footer__col p { margin-bottom: 5px; font-size: 0.9rem; }
+        .footer__heading {
+            font-family: var(--font-primary);
+            color: var(--color-brand-secondary);
+            margin-bottom: var(--space-sm);
+            font-size: 1rem;
+            position: relative;
+            padding-left: var(--space-sm);
+        }
+        .footer__heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 80%;
+            background: linear-gradient(135deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
+        }
+        .footer__list {
+            list-style: none;
+            padding: 0;
+        }
+        .footer__list li { margin-bottom: 8px; font-size: 0.9rem; }
+        .footer__social a {
+            margin-right: var(--space-sm);
+            transition: transform 0.3s;
+            color: var(--color-bg-white);
+        }
+        .footer__social a:hover {
+            transform: translateY(-3px);
+            color: var(--color-brand-secondary);
+        }
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--space-sm) 0;
+            text-align: center;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* BOTÃO WHATSAPP FLUTUANTE COM GRADIENTE */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            animation: pulse-whats 2s infinite;
+        }
+        .whatsapp-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(37, 211, 102, 0.3);
+            animation: ripple 1.5s infinite;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.7);
+        }
+        .whatsapp-button i {
+            color: white;
+            font-size: 28px;
+            position: relative;
+            z-index: 1;
+        }
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 75px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            white-space: nowrap;
+            font-weight: 600;
+            color: var(--color-text-header);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+        }
+        .whatsapp-button:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 85px;
+        }
+
+        @keyframes pulse-whats {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* MODAL DE TERMOS COM GRADIENTE */
+        .terms-modal {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(52, 58, 64, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+        .terms-modal.show {
+            transform: translateY(0);
+        }
+        .terms-modal__content {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .terms-modal__text {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .terms-modal__text a {
+            color: var(--color-brand-secondary);
+            text-decoration: underline;
+        }
+        .terms-modal__buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .terms-modal .button {
+            min-width: 140px;
+            font-size: 0.85rem;
+        }
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+            transition-duration: 0.8s;
+            transition-timing-function: ease-out;
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: none;
+        }
+        [data-aos="fade-up"] { transform: translateY(30px); }
+        [data-aos="fade-right"] { transform: translateX(-50px); }
+        [data-aos="fade-left"] { transform: translateX(50px); }
+        [data-aos="zoom-in"] { transform: scale(0.9); }
+
+        /* RESPONSIVIDADE MOBILE */
+        @media (max-width: 1024px) {
+            .heading-display { font-size: 2.2rem; }
+            .heading-secondary { font-size: 1.8rem; }
+            .section--padded-lg { padding: var(--space-lg) 0; }
+            
+            .grid--2-cols-split,
+            .grid--4-cols { grid-template-columns: 1fr; }
+
+            .header__toggle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 25px;
+                cursor: pointer;
+                z-index: 1010;
+                border: none;
+                background: transparent;
+                padding: 0;
+            }
+            .header__bar {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background: var(--color-text-header);
+                border-radius: 1.5px;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .header__toggle.is-active .header__bar:nth-child(2) {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            .header__toggle.is-active .header__bar:nth-child(1) {
+                transform: translateY(11px) rotate(45deg);
+            }
+            .header__toggle.is-active .header__bar:nth-child(3) {
+                transform: translateY(-11px) rotate(-45deg);
+            }
+
+            .navigation {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-bg-light) 100%);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                transition: max-height 0.4s ease-in-out;
+                border-top: 5px solid var(--color-brand-primary);
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+            .navigation.is-active { max-height: 600px; }
+            
+            .navigation__list {
+                flex-direction: column;
+                padding: var(--space-md) 0;
+                gap: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .navigation__item {
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            }
+            
+            .navigation.is-active .navigation__item { opacity: 1; transform: translateY(0); }
+            .navigation.is-active .navigation__item:nth-child(1) { transition-delay: 0.1s; }
+            .navigation.is-active .navigation__item:nth-child(2) { transition-delay: 0.2s; }
+            .navigation.is-active .navigation__item:nth-child(3) { transition-delay: 0.3s; }
+            .navigation.is-active .navigation__item:nth-child(4) { transition-delay: 0.4s; }
+            .navigation.is-active .navigation__item:nth-child(5) { transition-delay: 0.5s; }
+            .navigation.is-active .navigation__item:nth-child(6) { transition-delay: 0.6s; }
+            
+            .navigation__link {
+                display: block;
+                padding: 15px 0;
+                justify-content: center;
+            }
+            
+            .navigation__submenu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                border-top: none;
+                background: rgba(0, 77, 64, 0.03);
+                margin-top: 8px;
+            }
+            .navigation__submenu li a {
+                padding: 10px 0;
+            }
+
+            .hero__actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-tab {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="main-header" role="banner" data-scroll-state="top">
+        <div class="container header__content">
+            <a href="inicio.html" class="header__logo" aria-label="Voltar para a Página Inicial">
+                <img src="imagens/logo-saint.png" alt="Saint Patrick - Infraestrutura" width="150" height="40">
+            </a>
+            
+            <nav class="navigation" aria-label="Navegação Principal" id="main-nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="inicio.html" class="navigation__link">
+                            Início
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="empresa.html" class="navigation__link">
+                            Empresa
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--dropdown">
+                        <a href="servicos.html" class="navigation__link navigation__link--service" aria-expanded="false" aria-controls="submenu-servicos">
+                            Serviços <i class="fas fa-chevron-down navigation__icon"></i>
+                        </a>
+                        <ul class="navigation__submenu" id="submenu-servicos">
+                            <li><a href="#">Fresa & Capa</a></li>
+                            <li><a href="#">Tapa Valas</a></li>
+                            <li><a href="#">Selagem & Binder</a></li>
+                            <li><a href="#">Pintura Asfaltica</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">
+                            Projetos Realizados
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#form-section" class="navigation__link" id="cotacao-link">
+                            Cotação
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#form-section" class="navigation__link navigation__link--active" id="contato-link">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <button id="menu-toggle" class="header__toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Alternar Menu">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero__slider" role="region" aria-label="Carrossel de Projetos de Pavimentação">
+                <div class="hero__slide hero__slide--active" data-slide="1">
+                    <img src="imagens/logo 1 - inicio.png" alt="Vista de São Paulo" class="hero__image">
+                </div>
+            </div>
+            <div class="hero__overlay"></div>
+            
+            <div class="container hero__content">
+                <h1 class="heading-display text--light" data-aos="fade-up" data-aos-delay="100">Entre em Contato</h1>
+                <h2 class="h2-inline-bold-white" data-aos="fade-up" data-aos-delay="200">Estamos prontos para atender suas necessidades</h2>
+                
+                <p class="text-lead text--light" data-aos="fade-up" data-aos-delay="300">Entre em contato conosco para esclarecer dúvidas, solicitar orçamentos ou conhecer melhor nossos serviços de pavimentação asfáltica.</p>
+                
+                <div class="hero__actions" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#form-section" class="button button--cta button--large">Solicitar Cotação</a>
+                    <a href="tel:+551128695788" class="button button--secondary button--large">Ligar Agora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE FORMULÁRIOS -->
+        <section id="form-section" class="form-section section--relief">
+            <div class="form-container">
+                <h2 class="section__title" data-aos="fade-up">Solicite uma Cotação ou Entre em Contato</h2>
+                <p class="text-lead text-center" data-aos="fade-up" data-aos-delay="100">Escolha a opção que melhor atende às suas necessidades.</p>
+                
+                <div class="form-tabs" data-aos="fade-up" data-aos-delay="200">
+                    <button class="form-tab active" data-tab="cotacao">Solicitar Cotação</button>
+                    <button class="form-tab" data-tab="contato">Enviar Mensagem</button>
+                </div>
+                
+                <!-- Formulário de Cotação -->
+                <div class="form-content active" id="cotacao-form">
+                    <div class="contact-form" data-aos="fade-up">
+                        <h3>Solicite uma Cotação</h3>
+                        
+                        <!-- Mensagens de Feedback -->
+                        <div class="form-feedback" id="cotacao-feedback"></div>
+                        
+                        <form id="cotacaoForm">
+                            <div class="form-group">
+                                <label for="cotacao-name" class="form-label">Nome Completo *</label>
+                                <input type="text" id="cotacao-name" name="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-email" class="form-label">E-mail *</label>
+                                <input type="email" id="cotacao-email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-phone" class="form-label">Telefone *</label>
+                                <input type="tel" id="cotacao-phone" name="phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-service" class="form-label">Serviço de Interesse *</label>
+                                <select id="cotacao-service" name="service" class="form-control" required>
+                                    <option value="" disabled selected>Selecione um serviço</option>
+                                    <option value="fresa-capa">Fresa & Capa</option>
+                                    <option value="tapa-valas">Tapa Valas</option>
+                                    <option value="selagem-binder">Selagem & Binder</option>
+                                    <option value="pintura-asfaltica">Pintura Asfáltica</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-area" class="form-label">Área Aproximada (m²)</label>
+                                <input type="number" id="cotacao-area" name="area" class="form-control" min="1">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-location" class="form-label">Localização do Projeto *</label>
+                                <input type="text" id="cotacao-location" name="location" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-deadline" class="form-label">Prazo Desejado</label>
+                                <input type="date" id="cotacao-deadline" name="deadline" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cotacao-message" class="form-label">Detalhes Adicionais</label>
+                                <textarea id="cotacao-message" name="message" class="form-control" placeholder="Descreva detalhes sobre o projeto, condições específicas ou outras informações relevantes..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="form-submit">Solicitar Cotação</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Formulário de Contato -->
+                <div class="form-content" id="contato-form">
+                    <div class="contact-form" data-aos="fade-up">
+                        <h3>Envie sua Mensagem</h3>
+                        
+                        <!-- Mensagens de Feedback -->
+                        <div class="form-feedback" id="contato-feedback"></div>
+                        
+                        <form id="contatoForm">
+                            <div class="form-group">
+                                <label for="contato-name" class="form-label">Nome Completo *</label>
+                                <input type="text" id="contato-name" name="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contato-email" class="form-label">E-mail *</label>
+                                <input type="email" id="contato-email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contato-phone" class="form-label">Telefone</label>
+                                <input type="tel" id="contato-phone" name="phone" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contato-subject" class="form-label">Assunto *</label>
+                                <select id="contato-subject" name="subject" class="form-control" required>
+                                    <option value="" disabled selected>Selecione um assunto</option>
+                                    <option value="duvida">Dúvida Técnica</option>
+                                    <option value="reclamacao">Reclamação</option>
+                                    <option value="elogio">Elogio</option>
+                                    <option value="parceria">Proposta de Parceria</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contato-message" class="form-label">Mensagem *</label>
+                                <textarea id="contato-message" name="message" class="form-control" placeholder="Descreva sua mensagem aqui..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="form-submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO -->
+        <section id="contact" class="contact-section section--relief">
+            <div class="contact-container">
+                <h2 class="section__title" data-aos="fade-up">Informações de Contato</h2>
+                <p class="text-lead text-center" data-aos="fade-up" data-aos-delay="100">Estamos à disposição para esclarecer dúvidas, receber sugestões e atender suas necessidades.</p>
+                
+                <div class="contact-grid">
+                    <!-- Informações de Contato -->
+                    <div class="contact-info" data-aos="fade-right">
+                        <h3>Informações de Contato</h3>
+                        
+                        <!-- Imagem de Contato -->
+                        <div class="contact-image">
+                            <img src="imagens/logo 1 - inicio.png" alt="Saint Patrick Infraestrutura - Equipe de Pavimentação">
+                        </div>
+                        
+                        <ul class="contact-details">
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Endereço</h4>
+                                    <p>R. Santos Dumont, 1316 (Sala 4)</p>
+                                    <p>Ferraz de Vasconcelos - SP</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Telefone</h4>
+                                    <p><a href="tel:+551128695788">(11) 2869-5788</a></p>
+                                    <p><small>Segunda a Sexta: 8h às 18h</small></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>E-mail</h4>
+                                    <p><a href="mailto:saintpatrick.infraestrutura@gmail.com">saintpatrick.infraestrutura@gmail.com</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Horário de Atendimento</h4>
+                                    <p>Segunda a Sexta: 8h às 18h</p>
+                                    <p>Sábado: 8h às 12h</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <h3>Siga-nos nas Redes Sociais</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Informações Adicionais -->
+                    <div class="contact-info" data-aos="fade-left">
+                        <h3>Por que Escolher a Saint Patrick?</h3>
+                        
+                        <ul class="contact-details">
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Qualidade Garantida</h4>
+                                    <p>Utilizamos materiais de primeira linha e mão de obra especializada para garantir a durabilidade do seu pavimento.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Entrega no Prazo</h4>
+                                    <p>Comprometemo-nos com prazos realistas e cumprimos rigorosamente os cronogramas estabelecidos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Melhor Custo-Benefício</h4>
+                                    <p>Oferecemos soluções com excelente relação custo-benefício, sem abrir mão da qualidade.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Suporte Técnico</h4>
+                                    <p>Nossa equipe está disponível para orientação técnica antes, durante e após a execução dos serviços.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MAPA -->
+        <section id="map" class="map-section section--relief">
+            <div class="map-container">
+                <h2 class="section__title" data-aos="fade-up">Nossa Localização</h2>
+                <p class="text-lead text-center" data-aos="fade-up" data-aos-delay="100">Venha nos visitar em nosso escritório em Ferraz de Vasconcelos</p>
+                
+                <div class="map-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.007911627503!2d-46.36978372468067!3d-23.67266046409915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce70b5e2a6f0b5%3A0x5e1a0c5c8c5d5d5d!2sR.%20Santos%20Dumont%2C%201316%20-%20Ferraz%20de%20Vasconcelos%2C%20SP%2C%2008540-000!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr" 
+                        class="map-iframe" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da Saint Patrick Infraestrutura">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Contato</h3>
+                <p><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>R. Santos Dumont,1316 (Sala 4) - Ferraz/Sp</p>
+                <p><i class="fas fa-phone" style="margin-right: 8px; opacity: 0.7;"></i>Telefone: (11) 2869-5788 </p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px; opacity: 0.7;"></i>Email: saintpatrick.infraestrutura@gmail.com </p>
+            </div>
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-link" style="margin-right: 8px;"></i>Links Rápidos</h3>
+                <ul class="footer__list">
+                    <li><a href="empresa.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Quem Somos</a></li>
+                    <li><a href="servicos.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Nossos Serviços</a></li>
+                    <li><a href="empresa.html"><i class="fas fa-chevron-right" style="margin-right: 8px; font-size: 0.8rem;"></i>Portfólio</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__col">
+                <h3 class="footer__heading"><i class="fas fa-share-alt" style="margin-right: 8px;"></i>Siga-nos</h3>
+                <div class="footer__social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 Saint Patrick. Todos os direitos reservados. | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/551128695788?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20ou%20tirar%20dúvidas%20sobre%20serviços%20de%20pavimentação." class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Fale conosco!</div>
+    </a>
+
+    <!-- MODAL DE TERMOS E COOKIES -->
+    <div class="terms-modal" id="terms-modal">
+        <div class="terms-modal__content">
+            <p class="terms-modal__text">
+                🍪 Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa 
+                <a href="#">Política de Privacidade</a> e <a href="#">Termos de Uso</a>.
+            </p>
+            <div class="terms-modal__buttons">
+                <button class="button button--cta" id="accept-terms">Aceitar Todos</button>
+                <button class="button button--secondary" id="reject-terms" style="background: transparent; color: white; border-color: white;">Recusar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const aosElements = document.querySelectorAll('[data-aos]');
+            const dropdownToggles = document.querySelectorAll('.navigation__link--service');
+            const termsModal = document.getElementById('terms-modal');
+            const acceptTerms = document.getElementById('accept-terms');
+            const rejectTerms = document.getElementById('reject-terms');
+            const cotacaoForm = document.getElementById('cotacaoForm');
+            const contatoForm = document.getElementById('contatoForm');
+            const cotacaoFeedback = document.getElementById('cotacao-feedback');
+            const contatoFeedback = document.getElementById('contato-feedback');
+            const formTabs = document.querySelectorAll('.form-tab');
+            const formContents = document.querySelectorAll('.form-content');
+            const cotacaoLink = document.getElementById('cotacao-link');
+            const contatoLink = document.getElementById('contato-link');
+
+            // Modal de Termos (mostrar após 1 segundo se não foi aceito antes)
+            setTimeout(() => {
+                const termsAccepted = localStorage.getItem('termsAccepted');
+                if (!termsAccepted) {
+                    termsModal.classList.add('show');
+                }
+            }, 1000);
+
+            // Aceitar termos
+            if (acceptTerms) {
+                acceptTerms.addEventListener('click', () => {
+                    localStorage.setItem('termsAccepted', 'true');
+                    termsModal.classList.remove('show');
+                });
+            }
+
+            // Recusar termos
+            if (rejectTerms) {
+                rejectTerms.addEventListener('click', () => {
+                    termsModal.classList.remove('show');
+                    localStorage.setItem('termsRejected', 'true');
+                    setTimeout(() => {
+                        termsModal.style.display = 'none';
+                    }, 500);
+                });
+            }
+
+            // Sticky Header
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        header.setAttribute('data-scroll-state', 'scrolled');
+                    } else {
+                        header.setAttribute('data-scroll-state', 'top');
+                    }
+                });
+                if (window.scrollY > 100) {
+                    header.setAttribute('data-scroll-state', 'scrolled');
+                }
+            }
+
+            // Menu Mobile
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    
+                    mainNav.classList.toggle('is-active');
+                    menuToggle.classList.toggle('is-active');
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                    
+                    document.body.style.overflow = mainNav.classList.contains('is-active') ? 'hidden' : '';
+                });
+                
+                mainNav.querySelectorAll('.navigation__link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('is-active') && window.innerWidth <= 1024 && !link.closest('.navigation__item--dropdown')) {
+                            mainNav.classList.remove('is-active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            menuToggle.classList.remove('is-active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+            }
+
+            // Submenu Mobile (Acordeão)
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        
+                        const submenu = toggle.closest('.navigation__item--dropdown').querySelector('.navigation__submenu');
+                        const isSubmenuExpanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+                        
+                        document.querySelectorAll('.navigation__submenu').forEach(sub => {
+                            if (sub !== submenu) sub.style.maxHeight = '0';
+                        });
+                        document.querySelectorAll('.navigation__link--service').forEach(t => {
+                            if (t !== toggle) t.setAttribute('aria-expanded', 'false');
+                        });
+                        
+                        if (!isSubmenuExpanded) {
+                            submenu.style.maxHeight = submenu.scrollHeight + "px";
+                            toggle.setAttribute('aria-expanded', 'true');
+                        } else {
+                            submenu.style.maxHeight = '0';
+                            toggle.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            });
+
+            // AOS (Animate On Scroll)
+            const aosObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const delay = element.getAttribute('data-aos-delay') ? parseInt(element.getAttribute('data-aos-delay')) : 0;
+                        
+                        setTimeout(() => {
+                            element.classList.add('aos-animate');
+                        }, delay);
+                        
+                        aosObserver.unobserve(element);
+                    }
+                });
+            }, { rootMargin: '0px 0px -150px 0px', threshold: 0.1 });
+
+            aosElements.forEach(element => aosObserver.observe(element));
+
+            // TABS DOS FORMULÁRIOS
+            formTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    
+                    // Atualizar tabs
+                    formTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    // Atualizar conteúdo
+                    formContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === `${tabId}-form`) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Links do menu para os formulários
+            if (cotacaoLink) {
+                cotacaoLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Ativar tab de cotação
+                    formTabs.forEach(tab => {
+                        if (tab.getAttribute('data-tab') === 'cotacao') {
+                            tab.click();
+                        }
+                    });
+                    
+                    // Rolar para a seção de formulários
+                    document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            if (contatoLink) {
+                contatoLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Ativar tab de contato
+                    formTabs.forEach(tab => {
+                        if (tab.getAttribute('data-tab') === 'contato') {
+                            tab.click();
+                        }
+                    });
+                    
+                    // Rolar para a seção de formulários
+                    document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // FORMULÁRIO DE COTAÇÃO
+            if (cotacaoForm) {
+                cotacaoForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Mostrar estado de carregamento
+                    const submitBtn = cotacaoForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Enviando...';
+                    submitBtn.disabled = true;
+                    
+                    // Simular envio (substituir por chamada real à API)
+                    setTimeout(() => {
+                        // Simulação de sucesso
+                        cotacaoFeedback.className = 'form-feedback success';
+                        cotacaoFeedback.textContent = 'Sua solicitação de cotação foi enviada com sucesso! Entraremos em contato em breve.';
+                        cotacaoFeedback.style.display = 'block';
+                        
+                        // Resetar formulário
+                        cotacaoForm.reset();
+                        
+                        // Restaurar botão
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Rolar para o topo do formulário
+                        cotacaoFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 2000);
+                });
+            }
+
+            // FORMULÁRIO DE CONTATO
+            if (contatoForm) {
+                contatoForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Mostrar estado de carregamento
+                    const submitBtn = contatoForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Enviando...';
+                    submitBtn.disabled = true;
+                    
+                    // Simular envio (substituir por chamada real à API)
+                    setTimeout(() => {
+                        // Simulação de sucesso
+                        contatoFeedback.className = 'form-feedback success';
+                        contatoFeedback.textContent = 'Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.';
+                        contatoFeedback.style.display = 'block';
+                        
+                        // Resetar formulário
+                        contatoForm.reset();
+                        
+                        // Restaurar botão
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Rolar para o topo do formulário
+                        contatoFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
